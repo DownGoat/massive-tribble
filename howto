@@ -1,0 +1,11 @@
+https://code.google.com/p/volatility/wiki/AndroidMemoryForensics
+Setup the sdk and ndk as it instructs.
+Download the sdk source. Do the build instructions they show, no need to actually compile it.
+Open eclipse and the sdk manager, let it download and install the stuff it wants.
+Also tick the boxes for system images.
+
+Download the Android source.
+Edit the .config and compile.
+
+Download and compile LiME, remember to edit the config file. The paths will not be the same.
+
