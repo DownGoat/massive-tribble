@@ -400,9 +400,15 @@ Email: 140468@hig.no}
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tempus tortor turpis, nec consectetur ante rutrum nec. Vestibulum non consectetur quam. Quisque posuere turpis nec nisi fringilla volutpat. Duis facilisis porta ipsum, vitae pellentesque mi congue ut. Aenean volutpat, velit ut vulputate maximus, nunc orci maximus elit, eu condimentum massa augue et turpis. Maecenas lacinia enim nunc, vel scelerisque sapien vestibulum sit amet. Suspendisse faucibus nulla in viverra pellentesque. Sed molestie fringilla est, vel ultricies dolor dignissim sed. Nam viverra eget ante sit amet viverra. Nunc efficitur porta suscipit.
+We will emulate a Android environment, we choose this approach instead of extracting the memory from a real device to reduce the complexity of the task, and literature shows that there is not a big difference between the dumped memory from a real device, and a emulator.
 
-Aliquam nunc nulla, consectetur vestibulum vulputate sed, efficitur sed massa. In in metus nibh. Maecenas commodo lorem quis elit porttitor, sed lacinia magna pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus facilisis, diam at efficitur tincidunt, massa nunc maximus sem, eu tincidunt mi lorem ut lacus. Proin egestas consectetur massa, faucibus tincidunt libero bibendum nec. Proin rhoncus felis odio, eu faucibus lorem fringilla sed. Curabitur sollicitudin augue id nulla scelerisque posuere.
+We will analyse the dumped memory, and focus our efforts on analysing the memory of the Dalvik JVM. We hope to develop a tool that can be used to analyse the different userland applications, such as mail/sms/cloud.
+
+\begin{itemize}
+	\item Use emulator (Android SDK), pmemsave to get memory.
+	\item Look into Dalvik, how can this be analyzed? Tool?
+	\item x86 vs ARM emulator.
+\end{itemize}
 \end{abstract}
 
 % no keywords
@@ -510,8 +516,8 @@ Aliquam nunc nulla, consectetur vestibulum vulputate sed, efficitur sed massa. I
 % command of the stfloats package.
 
 \input{introduction/introduction}
-\input{method/method}
-\input{results/results}
+%\input{method/method}
+%\input{results/results}
 \input{analysis/analysis}
 \input{conclusion/conclusion}
 
@@ -522,10 +528,10 @@ Aliquam nunc nulla, consectetur vestibulum vulputate sed, efficitur sed massa. I
 
 
 % use section* for acknowledgement
-\section*{Acknowledgment}
+%section*{Acknowledgment}
 
 
-The authors would like to thank...
+%The authors would like to thank...
 
 
 
