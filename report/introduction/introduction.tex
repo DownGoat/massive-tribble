@@ -1,4 +1,54 @@
 \section{Introduction}
+<<<<<<< HEAD
+The research for this project is from selected research papers, [paper1] has a
+thorough explanation on how to aquire memory from android devices using a
+kernel module (lime.ko) that satisfies forensic soundnes [kilde til paper som
+viser hvor like de er]. Other research papers [liste dem opp, med kilde] show
+other means of acquiring memory from live systems, one paper [link til frost,
+ref] got our attention since it shows how it is possible to acquire memory from
+a smartphone forcing coldboot by cooling the smartphone down in a freezer.
+However this solution has a high risk of memory corruption [bilde\\figur fra
+paperet som viser hvor mye man mistet over n tid, frost paperet afaik]. 
+
+
+\subsection{Preparations}
+When we started this project, the first step was to research papers in this
+subject. We started of searching on google to find tools and other information
+that could be important for our project. To find related research papers, we
+used the google scholar search engine. When everyone in our group had read and
+understood the papers we started to investigate how to capture the memory from
+the smartphone. After inquiring our teacher and other resources available at
+the university, the most feasible solution would be to use an emulator since
+none of us had any phones that would support the frost[ref til frost paper\\rec]
+method or lime kernel module [ref til lime kernel] without kernel sources for
+our phones. The warranty on our phones would be voided if we were to “root”
+them and since it is recommended to remove all content on the phone when
+flashing it, we choose to use an emulator.
+
+
+\subsection{Building the emulator environment}
+After we had chosen to go for the emulator route, we had to choose how we could
+get memory from the phone. After doing some reasearch [ref til pmemdum og
+lime], pmemdump seemed like the easiest solution since the Android SDK has a
+virtual machine running on qemu [ref til der vi så det med monitor og qemu].
+However we had a few “bumps in the road” where the monitor flag did not give
+the expected output and we had to research alternative methods. In our research
+the paper on lime [ref til lime] had good results in forensic use where the
+memory dumps where close to identical (99\%ish?, må få eksakt fra paper + ref)
+and could be used in a forensic setting (rart skrevet..). 
+The first step to create the android emulator using the lime kernel module was
+to compile a custom kernel. As a prerequisite of this, we had to download the
+android SDK, the android NDK and the android source code. After the
+prerequisite for the project where complete, we followed the wiki on volatility
+[link, ref] and loaded the custom kernel into a Android Virtual Device. During
+this process we had a number of issues, the guide on volatility’s google codes
+page was followed first, however there was some confusion on what we had to
+follow from googles own guidelines and what volatility required.
+
+\subsection{Memory Analysis}
+This chapter explains how we analyzed the memory of the android device that was
+emulated. We used multiple tools, where most are open source.
+=======
 In computer forensics, memory/RAM have been common source of digital evidence. 
 Modern smartphones also use memory for running OS, application and user data 
 which might be of value in forensics investigations. Especially when encryption 
@@ -14,15 +64,16 @@ One or more out of these:
 	\item Proposed method for how to extract smartphone memory as evidence data in a forensically sound manner.
 \end{itemize}
 
-\section{Background}
+\subsection{Background}
 The research for this project is from selected research papers, [paper1] has a thorough explanation on how to aquire memory from android devices using a kernel module (lime.ko) that satisfies forensic soundnes [kilde til paper som viser hvor like de er]. Other research papers [liste dem opp, med kilde] show other means of acquiring memory from live systems, one paper [link til frost, ref] got our attention since it shows how it is possible to acquire memory from a smartphone forcing coldboot by cooling the smartphone down in a freezer. However this solution has a high risk of memory corruption [bilde/figur fra paperet som viser hvor mye man mistet over n tid, frost paperet afaik]. 
 
-\section{Preparations}
+\subsection{Preparations}
 When we started this project, the first step was to research papers in this subject. We started of searching on google to find tools and other information that could be important for our project. To find related research papers, we used the google scholar search engine. When everyone in our group had read and understood the papers we started to investigate how to capture the memory from the smartphone. After inquiring our teacher and other resources available at the university, the most feasible solution would be to use an emulator since none of us had any phones that would support the frost[ref til frost paper/rec] method or lime kernel module [ref til lime kernel] without kernel sources for our phones. The warranty on our phones would be voided if we were to “root” them and since it is recommended to remove all content on the phone when flashing it, we choose to use an emulator.
 
-\section{Building the emulator environment}
+\subsection{Building the emulator environment}
 After we had chosen to go for the emulator route, we had to choose how we could get memory from the phone. After doing some reasearch [ref til pmemdum og lime], pmemdump seemed like the easiest solution since the Android SDK has a virtual machine running on qemu [ref til der vi så det med monitor og qemu]. However we had a few “bumps in the road” where the monitor flag did not give the expected output and we had to research alternative methods. In our research the paper on lime [ref til lime] had good results in forensic use where the memory dumps where close to identical (99\%ish?, må få eksakt fra paper + ref) and could be used in a forensic setting (rart skrevet..). 
 The first step to create the android emulator using the lime kernel module was to compile a custom kernel. As a prerequisite of this, we had to download the android SDK, the android NDK and the android source code. After the prerequisite for the project where complete, we followed the wiki on volatility [link, ref] and loaded the custom kernel into a Android Virtual Device. During this process we had a number of issues, the guide on volatility’s google codes page was followed first, however there was some confusion on what we had to follow from googles own guidelines and what volatility required.
 
 
+>>>>>>> 2ec2bff6dcbed21969b3b462e22f1a79d5f9e01e
 

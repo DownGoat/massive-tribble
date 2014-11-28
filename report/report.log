@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.6)  21 NOV 2014 17:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.5)  28 NOV 2014 11:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -331,12 +331,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 (./introduction/introduction.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 12.
-) (./analysis/analysis.tex [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
-}
+(Font)              <7> on input line 62.
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]) (./conclusion/conclusion.tex) (./report.bbl)
+]) (./related_work/related_work.tex) (./method/method.tex)
+(./results/results.tex) (./analysis/analysis.tex) (./conclusion/conclusion.tex)
+(./report.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -348,25 +349,23 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2
-
-] (./report.aux) ) 
+[2] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 1166 strings out of 493304
- 18554 string characters out of 6139871
+ 1179 strings out of 493304
+ 18750 string characters out of 6139871
  77946 words of memory out of 5000000
  4659 multiletter control sequences out of 15000+600000
- 34830 words of font info for 68 fonts, out of 8000000 for 9000
+ 35966 words of font info for 69 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  26i,8n,19p,951b,244s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a
-.pfb>
-Output written on report.pdf (2 pages, 76976 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri
+8a.pfb>
+Output written on report.pdf (2 pages, 80042 bytes).
 PDF statistics:
  36 PDF objects out of 1000 (max. 8388607)
  25 compressed objects within 1 object stream
