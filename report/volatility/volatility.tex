@@ -1,21 +1,21 @@
 \section{Volatility}
 Volatility is a open source collection of tools used to extract digital
-artifacts from memory.\footnote{https://github.com/volatilityfoundation/volatility} 
+artefacts from memory.\footnote{https://github.com/volatilityfoundation/volatility} 
 The framework is not meant for a live forensic analysis but an offline analysis
-on memory aquired from a live machine or device, see Section \ref{lime} for
-memory aqusition. Volatility has support for Windows, Mac OS, and Linux, and
+on memory acquired from a live machine or device, see Section \ref{lime} for
+memory acquisition. Volatility has support for Windows, Mac OS, and Linux, and
 from version 2.3 they also supported the ARM architecture, this is essential
 for analysing memory on Android devices, as most devices that run Android has a
 ARM architecture. With a memory dump Volatility can extract information such as
 running processes, network connections, mounted devices and view the mapped
 memory for processes and kernel modules. Volatility is especially useful when
 analysing a system compromised by malware, as malware often hides itself in
-memory to avoid detection. With Votality the artifacts of the malware can be
+memory to avoid detection. With Volatility the artefacts of the malware can be
 found, and be analysed. \\
 
 Volatility can also help when encryption is used on the device, if the device is
 powered down the keys will be lost and you might be unable to use the data 
-collected from a less volitaile source such as a SD card or a hard drive. With
+collected from a less volatile source such as a SD card or a hard drive. With
 Volatility the keys can be extracted from the memory (if present), Volatility 
 comes with a plugin that can be used to extract the key used by Truecrypt for 
 disk encryption. In our case we wanted to see if we could find the encryption
@@ -30,9 +30,9 @@ Dalvik bytecode. This makes the Dalvik VM a good entry point for analysing
 applications. The first application that starts and runs in a Dalvik VM is the
 \textit{zygote} process. It preloades and initializes classes that are shared
 between different processes, it is also the process that will fork additional
-Dalvik VMs if requierd. The Dalvik VM is implemented as a shared library which
+Dalvik VMs if required. The Dalvik VM is implemented as a shared library which
 is loaded dynamically by applications. This can be seen by the pstree and
-proc\_maps plugins, see Appendics \ref{pstree} and \ref{procmaps}. \\
+proc\_maps plugins, see Appendix \ref{pstree} and \ref{procmaps}. \\
 
 Since all the user applications on Android runs in a Dalvik VM it makes a good entry
 point for forensic analysis, the source code is also publicly available. It is
@@ -42,7 +42,7 @@ and \cite{holger} shows that the \textit{DvmGlobals} structure which is
 declared in \textit{dalvik/vm/Globals.h} contains a lot of information about
 the application it is running. The \textit{loadedClasses} member is a pointer
 to a hash table which contains the all the system classes, this makes it a
-valueable structure because it can point us to where in memory information can
+valuable structure because it can point us to where in memory information can
 be found. 
 %address space stuff here
 
