@@ -6,11 +6,11 @@
     \item[dd on /dev/mem] \hfill \\
       This is a very simple method for acquiring memory. But /dev/mem can only be used directly when the kernel is 
       compiled with the STRICT\_DEVMEM flag off or with a kernel version pre 2.6. The first kernel version ever used on 
-      android is version 2.6.25 \footnote{http://elinux.org/Android\_Kernel\_Versions}.
+      android is version 2.6.25\footnote{http://elinux.org/Android\_Kernel\_Versions}.
     \item[fmem] \hfill \\
       fmem is a LKM (Loadable Kernel Module) which creates /dev/fmem. /dev/fmem is similar to /dev/mem, but without the limitations.
     \item[LiME LKM] \hfill \\
-      LiME (Linux Memory Extractor) LKM \footnote{https://github.com/504ensicsLabs/LiME} provides a forensically sound method for acquiring memory from 
+      LiME (Linux Memory Extractor) LKM\footnote{https://github.com/504ensicsLabs/LiME} provides a forensically sound method for acquiring memory from 
       memory \cite{heriyanto2013procedures}.
   \end{description}
   \subsubsection{Chosen approach}
@@ -21,29 +21,36 @@ to conduct our experiment on.\\
 To make the experiment as close to reality as possible it should have been done on a physical device, 
 however, an emulator gives us a close match to reality and is easily replicable. Also, by using an emulator 
 we avoid rooting our own phones, thus we avoid voiding warranty. Also, we found a guide on the Volatility 
-wiki \footnote{https://github.com/volatilityfoundation/volatility/wiki/Android} for how to dump memory with 
+wiki\footnote{https://github.com/volatilityfoundation/volatility/wiki/Android} for how to dump memory with 
 an Android emulator. Therefore we chose to use an emulator.\\
 The guide is not very detailed, and some deviation from the guide was done to be able conduct the experiment. 
 A detailed guide on the setup can be found in the appendix \ref{setup}.\\
 
 The emulator was set up on a computer running the latest Ubuntu (Ubuntu 14.04.1 LTS x86\_64).\\
-The emulator we set up is based on the Nexus 7 (2012) and The Linux Kernel 2.6.29. This was chosen because of 
-convenience, since the guide we followed is using this and the 2.6 Kernel have very few restrictions.
+The emulator we set up is based on the Nexus 7 (2012) with Android 4.2.2 Jelly Bean (API level 17) and The Linux Kernel 2.6.29. 
+This was chosen because of convenience, since the guide we followed is using this and the 2.6 Kernel have very few restrictions.
 \subsection{Tools}
 What criteria we had for our tools
-  \subsubsection{Volatility}
+  \subsubsection{Volatility} % Det er jo en hel seksjon på dette? (av sindre)
   What is volatility? How could it be used?
   Support for many platforms: Windows, Linux, OS X
   Processes, network connections
   \subsubsection{PhotoRec}
-  What is Photorec? How does it differ from Volatility
+  File recovery tool, supports many platforms and file systems, including memory images. 
+  It Can extract images, text files and more.
 \subsection{Experiments}
-How we conducted experiments
+We did five dumps of the memory;
   \subsubsection{Clean dump}
-  What did we find?
+  The first dump we did was right after boot, with factory settings and nothing done to the device 
+  other than transferring the LiME LKM to the SD-card.
   \subsubsection{Pastebin entry}
-  Logs++
-  \subsubsection{Text Message}
-  Standard and secure
+  The second dump we did was after creating a pastebin entry on pastebin.com using the stock android browser (for 4.2.2),
+  to see if we could find our entry in the memory.
+  \subsubsection{Standard Text Message}
+  The next dump was after sending a text message to the standard messages application. Since the emulator provides an telnet 
+  interface, we where able to send a message using \texttt{sms send <phoneNumber> <textMessage>}.
+  \subsubsection{Secure Text Message}
+  Next we did the same as above, but after installing 
+  TextSecure\footnote{https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms}, which encrypts the messages. 
   \subsubsection{Screen lock}
-  pass-phrase and pin code, identification
+  We also did a memory dump after creating a screen lock with a PIN code and using a passphrase.
