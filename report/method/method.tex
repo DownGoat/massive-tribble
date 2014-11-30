@@ -20,9 +20,15 @@ When starting the project we needed to decide weather to use an physical device 
 to conduct our experiment on.\\
 To make the experiment as close to reality as possible it should have been done on a physical device, 
 however, an emulator gives us a close match to reality and is easily replicable. Also, by using an emulator 
-we avoid rooting our own phones, thus we avoid voiding warranty.
+we avoid rooting our own phones, thus we avoid voiding warranty. Also, we found a guide on the Volatility 
+wiki \footnote{https://github.com/volatilityfoundation/volatility/wiki/Android} for how to dump memory with 
+an Android emulator. Therefore we chose to use an emulator.\\
+The guide is not very detailed, and some deviation from the guide was done to be able conduct the experiment. 
+A detailed guide on the setup can be found in the appendix \ref{setup}.\\
 
-
+The emulator was set up on a computer running the latest Ubuntu (Ubuntu 14.04.1 LTS x86_64).\\
+The emulator we set up is based on the Nexus 7 (2012) and The Linux Kernel 2.6.29. This was chosen because of 
+convenience, since the guide we followed is using this and the 2.6 Kernel have very few restrictions.
 \subsection{Tools}
 What criteria we had for our tools
   \subsubsection{Volatility}
