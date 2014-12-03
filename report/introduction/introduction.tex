@@ -5,34 +5,33 @@
 %keys are required to decrypt critical digital evidence and when passwords for web and cloud services are needed to 
 %access more sources of evidence. How to preserve digital evidence when analysing smartphone memory/RAM?
 
-In digital forensics, memory is an important source of evidence. Most data from any type of device
-is at some time stored in the memory.
-Modern smartphones use memory of larger sizes like a conventional computer (laptop, desktop etc.).
-These modern smarthpones contains memory and other user and application data which
-might be of value in forensic investigations.
-Data kept in the memory include information about running and terminated processes, open files and network
-information \cite{acq_vol_android_mem}. Other things stored in memory can be geolocation, web-history and
-encryption keys. The last mentioned example (encryption keys), might be exclusively valuable as forensic evidence.
-If a forensic investigator acquire these encryption keys, (s)he can get access to valuable/encrypted
-information which the owner of the device have encrypted.
+In digital forensics, memory is an important source of evidence. Most data from applications
+is at some time stored in the memory of the device. Modern smartphones use memory of larger sizes like 
+a conventional computer (laptop, desktop etc.). The memory in these devices contain user and 
+application data which might be of value in forensic investigations. Data kept in the memory include 
+information about running and terminated processes, open files and network information 
+\cite{acq_vol_android_mem}. Other valuable information stored in memory can be geolocation, web-history 
+and encryption keys. Encryption keys might be exclusively valuable as forensic evidence.
+If the encryption keys are aquired during a forensic investigation the investigator could get access to 
+valuabe information that might be encrypted.
 
-There are several ways of acquiring memory from an android device. In most cases, having root access to the device
-is a prerequisite. As presented by \cite{acq_vol_android_mem}, one way to get root access is to use a
-privilege escalation exploit. %more about this
+There are several ways of acquiring memory from an android device. When having hardware access its possible to extract from the memory chips on the device, other methods by using software would in most cases require a unlocked bootloader and root access. As presented by \cite{acq_vol_android_mem}, one way to get root access is to use a privilege escalation exploit. %more about this
 
 Acquiring memory may be quite simple in itself. But the other half of the job is to analyze the data.
-Analyzing such big data sets manually, is not feasible. To analyze the data faster and more accurately, certain tools
-are used.
+Analyzing such big data sets manually is not feasible. To analyze the data faster and more accurately, certain tools could be used. 
+% Liker ikke "flyten" i dette avsnittet .P
 
 To maintain evidence integrity, evidence acquisition should be performed automatically.
 
-Something that can be a challenge when acquiring memory from a device is that the the memory is volatile.
-The memory is considered volatile since it requires power to be kept present \cite{the_art_of_mem}.
-In other words, the memory changes very frequently. As a matter of fact, it changes in nano
-seconds[add source]. It is not possible to activate a write-blocker on memory as one would do when acquiring
-evidence from for instance a hard drive. Therefore, as with other kinds of digital evidence, it is important to
-gather the evidence as soon as possible. Something that can be done, is to put the device in hibernation or sleep mode.
+Something that can be a challenge when acquiring memory from a device is that the the memory is 
+volatile. The memory is considered volatile since it requires power to be kept present \cite{the_art_of_mem}.
+In other words, the memory changes very frequently. When looking at order of volatility, memory changes 
+every 10ns[add source]. It is not possible to activate a write-blocker on memory as one would do when 
+acquiringevidence from for instance a hard drive. Therefore, like when dealing with other sources of digital evidence, it is important to gather the evidence as soon as possible. 
+
+Something that can be done, is to put the device in hibernation or sleep mode.
 When this is done, the device is put on pause. The memory stays untouched and can be acquired as is.
+%Is this relevant to our project? \david
 %How to preserve digital evidence when analyzing smartphone memory/RAM?
 Different type of applications use different amounts of memory. Games use more memory than "regular" applications \cite{}.
 
