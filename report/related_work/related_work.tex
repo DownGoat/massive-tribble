@@ -1,1 +1,29 @@
 \section{Related Work}
+In the last years there has been done a lot of research on acquisition of memory and analysis
+techniques, targeting Linux and Android.
+
+The most common way to gain access to memory is gaining root privileges and load a new kernel into
+the phone. While this is not ideal, as it’s overwriting some of the memory in the progress, it’s the
+only known way to get access to memory of all running processes.
+
+In 2011 J. Sylve et al. presented a paper that described a forensic sound approach of acquiring
+Android memory. \cite{acq_vol_android_mem}
+
+This paper looked into ways of obtaining memory, with different tools and different approaches. In
+their experiment, with an emulator, they performed a memory dumping method that’s called
+“pmemsave” and compared it to other ways of dumping memory. When compared to another
+method called “dmd” it was over 99\% identical. Since the memory dumps takes time, in our
+experiment it took us 5 minutes to dump 800mb of memory, some changes will naturally occur in the
+memory.
+
+Based on these results, they believe that this method for dumping memory is a forensic sound
+process and can be used as evidence in court.
+
+To analysis these data extracted different methods can be used, in this project they also used
+Volatility. One of the key benefits of this open source program is the ability to make your own plug
+in. They made a plug in that separates the memory that belongs to a single process to make it much
+easier to manually analyse it. Unfortunately we were not able to find this plug in to test it.
+
+This may be the first paper published that presents a method of accurate memory acquisition on
+Android, as they write in their conclutions “To our knowledge, this is the first published work on
+accurate physical memory acquisition and deep memory analysis of the Android kernel’s structures.”.
