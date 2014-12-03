@@ -18,7 +18,8 @@ valuabe information that might be encrypted.
 There are several ways of acquiring memory from an android device. When having hardware access its possible to extract from the memory chips on the device, other methods by using software would in most cases require a unlocked bootloader and root access. As presented by \cite{acq_vol_android_mem}, one way to get root access is to use a privilege escalation exploit. %more about this
 
 Acquiring memory may be quite simple in itself. But the other half of the job is to analyze the data.
-Analyzing such big data sets manually is not feasible. To analyze the data faster and more accurately, certain tools could be used. 
+Analyzing such big data sets manually is not feasible. To analyze the data faster and more accurately, certain tools could be used.
+
 % Liker ikke "flyten" i dette avsnittet .P
 
 To maintain evidence integrity, evidence acquisition should be performed automatically.
@@ -34,8 +35,7 @@ evidence, it is important to gather the evidence as soon as possible.
 Different type of applications use different amounts of memory. Games use more memory than "regular" applications \cite{}.
 
 Something that makes analyzing android memory a bit more difficult is that the memory addresses that a process
-receives (including system processes), is fairly random. Therefore, looking for memory for a process in certain
-locations/addresses is a lost cause. %maybe citing here
+receives (including system processes), is fairly random because of address space layout randomization (ASLR). Therefore, looking for memory for a process in certain locations/addresses is a lost cause. %maybe citing here
 
 %devmem
 
