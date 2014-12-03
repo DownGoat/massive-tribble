@@ -18,26 +18,24 @@ valuabe information that might be encrypted.
 There are several ways of acquiring memory from an android device. When having hardware access its possible to extract from the memory chips on the device, other methods by using software would in most cases require a unlocked bootloader and root access. As presented by \cite{acq_vol_android_mem}, one way to get root access is to use a privilege escalation exploit. %more about this
 
 Acquiring memory may be quite simple in itself. But the other half of the job is to analyze the data.
-Analyzing such big data sets manually is not feasible. To analyze the data faster and more accurately, certain tools could be used. 
+Analyzing such big data sets manually is not feasible. To analyze the data faster and more accurately, certain tools could be used.
+
 % Liker ikke "flyten" i dette avsnittet .P
 
 To maintain evidence integrity, evidence acquisition should be performed automatically.
 
 Something that can be a challenge when acquiring memory from a device is that the the memory is 
 volatile. The memory is considered volatile since it requires power to be kept present \cite{the_art_of_mem}.
-In other words, the memory changes very frequently. When looking at order of volatility, memory changes 
+The memory changes very frequently. When looking at order of volatility, memory changes 
 every 10ns[add source]. It is not possible to activate a write-blocker on memory as one would do when 
-acquiringevidence from for instance a hard drive. Therefore, like when dealing with other sources of digital evidence, it is important to gather the evidence as soon as possible. 
+acquiring evidence from for instance a hard drive or a flash memory medium. Therefore, like when dealing with other sources of digital
+evidence, it is important to gather the evidence as soon as possible. 
 
-Something that can be done, is to put the device in hibernation or sleep mode.
-When this is done, the device is put on pause. The memory stays untouched and can be acquired as is.
-%Is this relevant to our project? \david
 %How to preserve digital evidence when analyzing smartphone memory/RAM?
 Different type of applications use different amounts of memory. Games use more memory than "regular" applications \cite{}.
 
 Something that makes analyzing android memory a bit more difficult is that the memory addresses that a process
-receives (including system processes), is fairly random. Therefore, looking for memory for a process in certain
-locations/addresses is a lost cause. %maybe citing here
+receives (including system processes), is fairly random because of address space layout randomization (ASLR). Therefore, looking for memory for a process in certain locations/addresses is a lost cause. %maybe citing here
 
 %devmem
 
