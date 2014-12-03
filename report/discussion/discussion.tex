@@ -1,34 +1,31 @@
 \section{Discussion}
 In our project we where forced to discuss some issues for the project to be 
 possible in our time frame. Our choice would need to be in a forensic sound manner 
-so they could be applicable in court. 
+so they could be applicable in a court. 
 
 \subsection{Real phone vs. emulator}
 In a real case scenario, a forensic investigator would receive a physical device 
 that the investigator should aquire evidence from. However in this project there 
-are a number of reasons for why we didn't use a physical device.
+are a number of reasons for why we didn't use a physical device.\\
 
-\subsubsection{Warranty}
 While many companies give instructions on how to unlock their bootloader, they also 
-state that the warranty is void. However law-regulations in many European countries 
-have better consumer laws that give the consumer rights if the flaw %mangel, norsk ord
-is not related to rom or kernel of the device. Although we therefore would not have 
+state that the warranty is voided. However law-regulations in many European countries 
+have better consumer laws that give the consumer rights if the fault %mangel, norsk ord
+is not related to ROM or kernel of the device. Although we therefore would not have 
 any real risk of loosing our rights to the producer we choose not to use our own 
 devices since there always is some risk involved where the device could be bricked 
-and consumer laws would not be applicable.
+and consumer laws would not be applicable.\\
 
-\subsubsection{Reproducibility}
 When conducting scientific experiments, it is important to do something that is 
 reproducible. By using a emulator we can document how it is set up so others can 
 copy the environment and get the same results. Physical devices could be a issue 
-where the device is out of production. There are also guides available where the 
-environment and prerequisites are explained.
+where the device is out of production.
 
 \subsection{Secure app - Textsecure}
 One of our experiments was to look into how a app that gives the user higher 
 privacy by encrypting its messages. Textsecure also enables encrypted point-to-
 point encryption by use of PKI. As our results have shown we did not see the 
-message in the memory dump like we did when tested against the stock sms app. 
+message in the memory dump like we did when tested against the stock SMS app. 
 However, it might be possible to extract the encryption keys where the database was 
 aquired and decrypt the messages. Since Textsecure is open source it is
 possible to look through it's code and see how it works. We know that at some
@@ -78,5 +75,4 @@ the kernel source from the producer of the device. These are often not released 
 every device and could be a issue when getting evidence in the field. Since time is 
 a issue when dealing with such volatile evidence it could be feasable to have 
 precompiled kernels and modules that would work on most common devices. However 
-this might be known by the criminals. %Finnes det noe research på mobiler brukt av 
-kriminelle? statistikk :P
+this might be known by the criminals. %Finnes det noe research på mobiler brukt av kriminelle? statistikk :P
