@@ -35,7 +35,8 @@ evidence, it is important to gather the evidence as soon as possible.
 Different type of applications use different amounts of memory. Games use more memory than "regular" applications \cite{}.
 
 Something that makes analyzing android memory a bit more difficult is that the memory addresses that a process
-receives (including system processes), is fairly random because of address space layout randomization (ASLR). Therefore, looking for memory for a process in certain locations/addresses is a lost cause. %maybe citing here
+receives (including system processes), is fairly random because of address space layout randomization (ASLR). Therefore, looking for memory for a process in certain locations/addresses is a lost cause.
+ASLR was mainly developed for preventing buffer overflows \cite{prot_aslr}. But it also makes it more difficult when analyzing memory.
 
 %devmem
 
