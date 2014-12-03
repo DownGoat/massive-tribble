@@ -37,8 +37,8 @@ Different type of applications use different amounts of memory. Games use more m
 Since games use more memory, also dynamically, objects not being used in the memory can be erased. This can result in
 loss of evidence that may be useful in an investigation.
 
-Something that makes analysing android memory more difficult than other operating systems is that the memory addresses 
-each process receive (including system processes), is fairly random because of address space layout randomization (ASLR). 
+Analyzing memory of android devices is more difficult than on other operating systems because of the memory address 
+each process receive (including system processes), is fairly random by use of address space layout randomization(ASLR). 
 Therefore, investigating memory used by a specific process in certain locations/addresses can be very difficult.
 ASLR was mainly developed for preventing buffer overflows \cite{prot_aslr}. But it also makes it more difficult when 
 analysing memory.
