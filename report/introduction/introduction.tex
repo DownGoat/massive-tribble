@@ -16,8 +16,11 @@ encryption keys. The last mentioned example (encryption keys), might be exclusiv
 If a forensic investigator acquire these encryption keys, (s)he can get access to valuable/encrypted
 information which the owner of the device have encrypted.
 
-There are several ways of acquiring memory from an android device. In most cases, having root access to the device
-is a prerequisite. As presented by \cite{acq_vol_android_mem}, one way to get root access is to use a
+There are several ways of acquiring memory from an android device.
+It is not possible to perform a memory dump from an android device right out of the box. To be able to do this,
+a module has to be implemented. 
+To be able to dump memory from an android device, a module has to be implemented.
+As presented by \cite{acq_vol_android_mem}, one way to get root access is to use a
 privilege escalation exploit. %more about this
 
 Acquiring memory may be quite simple in itself. But the other half of the job is to analyze the data.
@@ -28,9 +31,9 @@ To maintain evidence integrity, evidence acquisition should be performed automat
 
 Something that can be a challenge when acquiring memory from a device is that the the memory is volatile.
 The memory is considered volatile since it requires power to be kept present \cite{the_art_of_mem}.
-In other words, the memory changes very frequently. As a matter of fact, it changes in nano
-seconds[add source]. It is not possible to activate a write-blocker on memory as one would do when acquiring
-evidence from for instance a hard drive. Therefore, as with other kinds of digital evidence, it is important to
+The memory changes very frequently. As a matter of fact, it changes in nano seconds[add source].
+It is not possible to activate a write-blocker on memory as one would do when acquiring evidence from for
+instance a hard drive. Therefore, as with other kinds of digital evidence, it is important to
 gather the evidence as soon as possible. Something that can be done, is to put the device in hibernation or sleep mode.
 When this is done, the device is put on pause. The memory stays untouched and can be acquired as is.
 %How to preserve digital evidence when analyzing smartphone memory/RAM?
