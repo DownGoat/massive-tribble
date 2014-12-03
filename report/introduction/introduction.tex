@@ -5,15 +5,13 @@
 %keys are required to decrypt critical digital evidence and when passwords for web and cloud services are needed to 
 %access more sources of evidence. How to preserve digital evidence when analysing smartphone memory/RAM?
 
-In digital forensics, memory is an important source of evidence. Most of the data from applications
-is at some time stored in the memory of the device. Modern smartphones use memory of larger sizes like 
-a conventional computer (laptop, desktop etc.). The memory in these devices contain user and 
-application data which might be of value in forensic investigations. Data kept in the memory include 
-information about running and terminated processes, open files and network information 
-\cite{acq_vol_android_mem}. Other valuable information stored in memory can be GPS data, web-history 
-and encryption keys. Encryption keys might be exclusively valuable as forensic evidence.
-If the encryption keys are acquired during a forensic investigation the investigator could get access to 
-valuable information that might be encrypted.
+In digital forensics, memory is an important source of evidence. Most of the data from applications is at some time 
+stored in the memory of the device. Modern smartphones use memory of larger sizes like a conventional computer (laptop, 
+desktop etc.). The memory in these devices contain user and application data which might be valuable in forensic 
+investigations. Data kept in the memory include information about running and terminated processes, open files and 
+network information \cite{acq_vol_android_mem}. Other valuable information stored in memory can be image files, GPS data, 
+web-history and encryption keys. Encryption keys might be highly valuable as forensic evidence. If the encryption keys 
+are acquired, a investigator could get access to valuable information that is encrypted.
 
 There are several ways of acquiring memory from an android device. When having hardware access its possible 
 to extract memory from the chips on the device, other methods by using software would in most cases require 
@@ -27,22 +25,23 @@ one way to get root access is to use a privilege escalation exploit. %more about
 
 %To maintain evidence integrity, evidence acquisition should be performed automatically.
 
-Something that can be a challenge when acquiring memory from a device is that the the memory is 
-volatile. The memory is considered volatile since it requires power to be kept present \cite{the_art_of_mem}.
-The memory changes very frequently. When looking at order of volatility, memory changes 
-approximately every 10ns. It is not possible to activate a write-blocker on memory as one would do when 
-acquiring evidence from for instance a hard drive or a flash memory medium. Therefore, like when dealing with other sources of digital
-evidence, it is important to gather the evidence as soon as possible. 
+Memory is highly volatile, acquiring it can therefore be a challenge. Memory is considered volatile for multiple reasons. 
+It requires  power to be kept present \cite{the_art_of_mem} and gets written to approximately every 10ns in regards of 
+order of volatility. %rar slutt på setning? nødvendig å nevne oov?
+It is not possible to use a write-blocker on memory as you could when acquiring evidence from for instance a hard drive 
+or a flash memory medium. Therefore, like when dealing with other sources of digital evidence, it is important to gather 
+the evidence as soon as possible. 
 
 %How to preserve digital evidence when analyzing smartphone memory/RAM?
 Different type of applications use different amounts of memory. Games use more memory than "regular" applications.
 Since games use more memory, also dynamically, objects not being used in the memory can be erased. This can result in
 loss of evidence that may be useful in an investigation.
 
-Something that makes analysing android memory a bit more difficult is that the memory addresses that a process
-receives (including system processes), is fairly random because of address space layout randomization (ASLR). 
-Therefore, looking for memory for a process in certain locations/addresses can be very difficult.
-ASLR was mainly developed for preventing buffer overflows \cite{prot_aslr}. But it also makes it more difficult when analysing memory.
+Something that makes analysing android memory more difficult than other operating systems is that the memory addresses 
+each process receive (including system processes), is fairly random because of address space layout randomization (ASLR). 
+Therefore, investigating memory used by a specific process in certain locations/addresses can be very difficult.
+ASLR was mainly developed for preventing buffer overflows \cite{prot_aslr}. But it also makes it more difficult when 
+analysing memory.
 
 
 
