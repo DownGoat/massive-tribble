@@ -29,3 +29,10 @@ how long different sorts of information stays in memory. This is probably
 something that will be hard to test using an emulator as actual live devices will 
 have a lot more apps and background services running. And you won't be likely to 
 get as clean a memory as we did with our experiments with the emulator. 
+
+In this paper we have only looked Android running with the Dalvik virtual machine, 
+in the more recent versions of Android the experimental Android RunTime(ART) 
+virtual machine is introduced. This changes how apps are compiled and run, from 
+Dalviks just-in-time memory management to ART’s ahead-of-time management. We 
+believe this might impact how memory is managed, and might cause different 
+results to the ones presented in this paper and might be a topic for further research. \\
