@@ -12,7 +12,7 @@ application data which might be of value in forensic investigations. Data kept i
 information about running and terminated processes, open files and network information 
 \cite{acq_vol_android_mem}. Other valuable information stored in memory can be geolocation, web-history 
 and encryption keys. Encryption keys might be exclusively valuable as forensic evidence.
-If the encryption keys are aquired during a forensic investigation the investigator could get access to 
+If the encryption keys are acquired during a forensic investigation the investigator could get access to 
 valuabe information that might be encrypted.
 
 There are several ways of acquiring memory from an android device. When having hardware access its possible to extract from the memory chips on the device, other methods by using software would in most cases require a unlocked bootloader and root access. As presented by \cite{acq_vol_android_mem}, one way to get root access is to use a privilege escalation exploit. %more about this
@@ -35,8 +35,10 @@ evidence, it is important to gather the evidence as soon as possible.
 Different type of applications use different amounts of memory. Games use more memory than "regular" applications \cite{}.
 
 Something that makes analyzing android memory a bit more difficult is that the memory addresses that a process
-receives (including system processes), is fairly random because of address space layout randomization (ASLR). Therefore, looking for memory for a process in certain locations/addresses is a lost cause.
+receives (including system processes), is fairly random because of address space layout randomization (ASLR). Therefore, looking for memory for a process in certain locations/addresses can be very difficult.
 ASLR was mainly developed for preventing buffer overflows \cite{prot_aslr}. But it also makes it more difficult when analyzing memory.
+
+
 
 %devmem
 
