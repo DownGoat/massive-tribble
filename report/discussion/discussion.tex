@@ -18,8 +18,8 @@ and consumer laws would not be applicable.
 When conducting scientific experiments, it is important to do something that is 
 reproducible. By using a emulator we can document how it is set up so others can 
 copy the environment and get the same results. Physical devices could be a issue 
-where the device is out of production. There are also guides available where the environment and prerequisites are explained.
-
+where the device is out of production. There are also guides available where the 
+environment and prerequisites are explained.
 \subsection{Secure app - Textsecure}
 One of our experiments was to look into how a app that gives the user higher 
 privacy by encrypting its messages. Textsecure also enables encrypted point-to-
@@ -33,8 +33,30 @@ Under the project we had some obstacles, we got a good start with researching an
 reading existing papers on the subject. However after we had decided on what 
 direction we would take the project there where multiple issues when building the 
 prerequisites for the kernel and emulator. There was some confusion from the guide 
-on volatility page on what to follow. Since the guide mentioned osx specifically we 
-did not pay close enough attention to what we would have to deviate from it.
+on volatility page on what to follow. Since the guide mentioned OS X specifically 
+we did not pay close enough attention to what we would have to deviate from it.
 %Emulator, volatility, plugins, building kernel.
 \subsection{Method}
+As stated earlier in the report we had a number of methods we could approach 
+obtaining memory from mobile devices. When choosing method we where looking for one 
+that gave us the most forensic sound evidence. Originally our chosen method was 
+using pmemsave %kommando, formatering
+that was mentioned in a earlier paper\cite{acq_vol_android_mem}. However this did 
+not work the emulator so the next best approach was chosen, where research sugests 
+it gives 99.46\% identical memory dumps\cite{acq_vol_android_mem}.
 \subsection{Applicable in forensic investigation}
+When doing research on aquiring evidence it is important to see how it correlates 
+to the real world. If the research is highly theoretical and not applicable it 
+could be seen as useless. Here we discuss our thoughts on what would be different 
+from a forensic investigation and our experiments.
+\subsubsection{Kernel Module}
+As explained in earlier chapters the LiME kernel module has to be compiled to the 
+running kernel. The kernel also has to support loading of kernel modules. This is 
+by default not allowed since it is a security vulnerability. This might be a 
+problem if the device is running a stock rom, where it would be necessary to obtain 
+the kernel source from the producer of the device. These are often not released for 
+every device and could be a issue when getting evidence in the field. Since time is 
+a issue when dealing with such volatile evidence it could be feasable to have 
+precompiled kernels and modules that would work on most common devices. However 
+this might be known by the criminals. %Finnes det noe research på mobiler brukt av 
+kriminelle? statistikk :P
