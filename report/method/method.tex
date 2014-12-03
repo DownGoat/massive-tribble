@@ -1,6 +1,6 @@
 \section{Method}
 \subsection{Methodology and approach}
-  \subsubsection{Alternatives}
+\subsubsection{Alternatives}\label{lime}
   We found several alternatives for acquisition of memory from android devices.
   \begin{description}
     \item[dd on /dev/mem] \hfill \\
@@ -47,7 +47,7 @@ What criteria we had for our tools
   running processes, network connections, mounted devices and view the mapped
   memory for processes and kernel modules. Volatility is especially useful when
   analysing a system compromised by malware, as malware often hides itself in
-  memory to avoid detection. With Volatility the artefacts of the malware can be
+  memory to avoid detection. With Volatility the artifacts of the malware can be
   found, and be analysed. \\
   
   Volatility can also help when encryption is used on the device, if the device is
@@ -78,10 +78,15 @@ What criteria we had for our tools
   and \cite{holger} shows that the \textit{DvmGlobals} structure which is
   declared in \textit{dalvik/vm/Globals.h} contains a lot of information about
   the application it is running. The \textit{loadedClasses} member is a pointer
-  to a hash table which contains the all the system classes, this makes it a
+  to a hash table which contains all the system classes, this makes it a
   valuable structure because it can point us to where in memory information can
-  be found. 
-  %address space stuff here
+  be found.\\
+
+  Volatility has a plugin interface for creating plugins. It is possible to
+  invoke other plugins from your own, this means you can stitch together
+  several other plugins to write your own. This makes it much easier to write
+  plugins, since you do not have to reinvent the wheel for every plugin. There
+  are plugins for analysing the Dalvik VM, but they are very version specific.
 
   \subsubsection{PhotoRec}
   File recovery tool, supports many platforms and file systems, including memory images. 

@@ -76,6 +76,8 @@
 
 \usepackage{bigfoot}
 \usepackage{hyperref}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
 % Some very useful LaTeX packages include:
 % (uncomment the ones you want to load)
@@ -402,15 +404,16 @@ Email: 140468@hig.no}
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-We will emulate a Android environment, we choose this approach instead of extracting the memory from a real device to reduce the complexity of the task, and literature shows that there is not a big difference between the dumped memory from a real device, and a emulator.
-
-We will analyse the dumped memory, and focus our efforts on analysing the memory of the Dalvik JVM. We hope to develop a tool that can be used to analyse the different userland applications, such as mail/sms/cloud.
-
-\begin{itemize}
-	\item Use emulator (Android SDK), pmemsave to get memory.
-	\item Look into Dalvik, how can this be analyzed? Tool?
-	\item x86 vs ARM emulator.
-\end{itemize}
+Smart phones today are getting ever more powerful , and capable of doing most of tasks usually associated 
+with computers. This have made them increasingly interesting in forensics investigations and information 
+theft. In this paper we present the findings we have done when looking at the volatile memory of a virtual 
+android device. In our research we have used string search and a hex editor to search through the memory to 
+find cleartext information to prove what sort of information that are stored here. We also discuss the 
+possibility and usefulness of automated forensics tools to look through smart phone memory and the 
+difficulties faced when developing such a toolset. Another aspect of our research was to look at secure apps 
+to see whether or not the volatile memory is taken into account in development. This research provides a 
+baseline for further development of memory analysis tools, proving its usefulness and what information  you 
+can expect to find here. 
 \end{abstract}
 
 % no keywords
@@ -524,6 +527,7 @@ We will analyse the dumped memory, and focus our efforts on analysing the memory
 \input{discussion/discussion}
 \input{conclusion/conclusion}
 \input{further_work/further_work}
+\input{appendix/appendix2}
 
 \nocite{*}
 
