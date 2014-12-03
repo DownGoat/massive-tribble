@@ -1,11 +1,11 @@
 \section{Discussion}
-In our project we where forced to discuss some issues for the project to be 
+In our project we where forced to discuss some issues for the project to be % Forced?? :P
 possible in our time frame. Our choice would need to be in a forensic sound manner 
 so they could be applicable in a court. 
 
 \subsection{Real phone vs. emulator}
 In a real case scenario, a forensic investigator would receive a physical device 
-that the investigator should aquire evidence from. However in this project there 
+that the investigator should acquire evidence from. However in this project there 
 are a number of reasons for why we didn't use a physical device.\\
 
 While many companies give instructions on how to unlock their bootloader, they also 
@@ -21,25 +21,25 @@ reproducible. By using a emulator we can document how it is set up so others can
 copy the environment and get the same results. Physical devices could be a issue 
 where the device is out of production.
 
-\subsection{Secure app - Textsecure}
-One of our experiments was to look into how a app that gives the user higher 
-privacy by encrypting its messages. Textsecure also enables encrypted point-to-
+\subsection{Secure application - TextSecure}
+One of our experiments was to look into how a application that gives the user higher 
+privacy by encrypting its messages. TextSecure also enables encrypted point-to-
 point encryption by use of PKI. As our results have shown we did not see the 
-message in the memory dump like we did when tested against the stock SMS app. 
+message in the memory dump like we did when tested against the stock SMS application. 
 However, it might be possible to extract the encryption keys where the database was 
-aquired and decrypt the messages. Since Textsecure is open source it is
+acquired and decrypt the messages. Since TextSecure is open source it is
 possible to look through it's code and see how it works. We know that at some
 point they have used a memory cleaner to clean sensitive memory after it has
 been used.
 \footnote{\url{http://goo.gl/mgDKpO}} 
-The memory cleaner class was in use in the version of Textsecure we tested, so
+The memory cleaner class was in use in the version of TextSecure we tested, so
 this may be why we did not find the messages in memory. We are unsure if the
 key is available in memory, as a key derivation algorithm is in use to
-genererate a more suitable key from the user made password. For this last
+generate a more suitable key from the user made password. For this last
 problem Volatility could have been used if we had a working version of the
-Dalvik plugins in time. Then we could have made a plugin that levrages the
+Dalvik plugins in time. Then we could have made a plugin that leverages the
 plugin that finds the loaded classes, and found where in the relevant
-Textsecure class the keys are stored. This might require that Textsecure is
+TextSecure class the keys are stored. This might require that TextSecure is
 open on the device, or else the memory cleaner might overwrite the keys.
 
 \subsection{Issues during the project}
@@ -57,11 +57,11 @@ obtaining memory from mobile devices. When choosing method we where looking for 
 that gave us the most forensic sound evidence. Originally our chosen method was 
 using pmemsave %kommando, formatering
 that was mentioned in a earlier paper\cite{acq_vol_android_mem}. However this did 
-not work the emulator so the next best approach was chosen, where research sugests 
+not work in the emulator, so the next best approach was chosen, where research suggests 
 it gives 99.46\% identical memory dumps\cite{acq_vol_android_mem}.
 
 \subsection{Applicable in forensic investigation}
-When doing research on aquiring evidence it is important to see how it correlates 
+When doing research on acquiring evidence it is important to see how it correlates 
 to the real world. If the research is highly theoretical and not applicable it 
 could be seen as useless. Here we discuss our thoughts on what would be different 
 from a forensic investigation and our experiments.
@@ -70,9 +70,9 @@ from a forensic investigation and our experiments.
 As explained in earlier chapters the LiME kernel module has to be compiled to the 
 running kernel. The kernel also has to support loading of kernel modules. This is 
 by default not allowed since it is a security vulnerability. This might be a 
-problem if the device is running a stock rom, where it would be necessary to obtain 
+problem if the device is running a stock ROM, where it would be necessary to obtain 
 the kernel source from the producer of the device. These are often not released for 
 every device and could be a issue when getting evidence in the field. Since time is 
-a issue when dealing with such volatile evidence it could be feasable to have 
-precompiled kernels and modules that would work on most common devices. However 
+a issue when dealing with such volatile evidence it could be feasible to have 
+pre-compiled kernels and modules that would work on most common devices. However 
 this might be known by the criminals. %Finnes det noe research på mobiler brukt av kriminelle? statistikk :P

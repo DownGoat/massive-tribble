@@ -12,18 +12,19 @@ Android memory. \cite{acq_vol_android_mem}
 This paper looked into ways of obtaining memory, with different tools and different approaches. In
 their experiment, with an emulator, they performed a memory dumping method that’s called
 “pmemsave” and compared it to other ways of dumping memory. When compared to another
-method called “dmd” it was over 99\% identical. Since the memory dumps takes time, in our
+method called Droid Memory Dumpstr (DMD) it was over 99\% identical. Since the memory dumps takes time, in our
 experiment it took us 5 minutes to dump 800mb of memory, some changes will naturally occur in the
 memory.
 
 Based on these results, they believe that this method for dumping memory is a forensic sound
 process and can be used as evidence in court.
 
-To analysis these data extracted different methods can be used, in this project they also used
-Volatility. One of the key benefits of this open source program is the ability to make your own plug
-in. They made a plug in that separates the memory that belongs to a single process to make it much
-easier to manually analyse it. Unfortunately we were not able to find this plug in to test it.
+To analysis the data extracted, different methods can be used, in this project they also used
+Volatility. One of the key benefits of this open source program is the ability to make your own plugin.
+They made a plugin that separates the memory that belongs to a single process to make it much
+easier to manually analyse it. Unfortunately we were not able to find this plugin to test it.
+% Hvem er they? Var det ikke disse pluginsa vi testa?
 
 This may be the first paper published that presents a method of accurate memory acquisition on
-Android, as they write in their conclutions “To our knowledge, this is the first published work on
-accurate physical memory acquisition and deep memory analysis of the Android kernel’s structures.”.
+Android, as they write in their conclusions "To our knowledge, this is the first published work on
+accurate physical memory acquisition and deep memory analysis of the Android kernel's structures".

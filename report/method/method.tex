@@ -28,13 +28,12 @@ an Android emulator. Therefore we chose to use an emulator.\\
 Some deviation from the guide was done to be able conduct the experiment, due to the fact that we were running on 
 a Linux system, not Mac OS X as the guide uses. This mostly involves editing the paths in the Makefiles you are editing 
 to fit your system. % teit setning?
-%A detailed guide on the setup can be found in the appendix \ref{setup}.\\
+A detailed guide on the setup can be found in the appendix.\\
 
 The emulator was set up on a computer running the latest Ubuntu (Ubuntu 14.04.1 LTS x86\_64).\\
 The emulator we set up is based on the Nexus 7 (2012) with Android 4.2.2 Jelly Bean (API level 17) and The Linux Kernel 2.6.29. 
 This was chosen because of convenience, since the guide we followed is using this and the 2.6 Kernel have very few restrictions.
 \subsection{Tools}
-What criteria we had for our tools
   \subsubsection{Volatility}
   Volatility is a open source collection of tools used to extract digital
   artefacts from memory.\footnote{\url{https://github.com/volatilityfoundation/volatility}} 
@@ -43,11 +42,11 @@ What criteria we had for our tools
   memory acquisition. Volatility has support for Windows, Mac OS, and Linux, and
   from version 2.3 they also supported the ARM architecture, this is essential
   for analysing memory on Android devices, as most devices that run Android has a
-  ARM architecture. With a memory dump Volatility can extract information such as
+  ARM architecture. With a memory dump, Volatility can extract information such as
   running processes, network connections, mounted devices and view the mapped
   memory for processes and kernel modules. Volatility is especially useful when
   analysing a system compromised by malware, as malware often hides itself in
-  memory to avoid detection. With Volatility the artifacts of the malware can be
+  memory to avoid detection. With Volatility the artefacts of the malware can be
   found, and be analysed. \\
   
   Volatility can also help when encryption is used on the device, if the device is
@@ -56,7 +55,7 @@ What criteria we had for our tools
   Volatility the keys can be extracted from the memory (if present), Volatility 
   comes with a plugin that can be used to extract the key used by Truecrypt for 
   disk encryption. In our case we wanted to see if we could find the encryption
-  key used by a popular SMS app to encrypt messages.\\
+  key used by a popular SMS app, TextSecure, to encrypt messages.\\
   
   The easiest approach to the problem of finding data used by Android
   applications is to go through the Dalvik VM as proposed by Case\cite{case2011}.
@@ -108,6 +107,9 @@ We did five dumps of the memory;
   interface, we where able to send a message using \texttt{sms send <phoneNumber> <textMessage>}.
   \subsubsection{Secure Text Message}
   Next we did the same as above, but after installing 
-  TextSecure\footnote{\url{https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms}}, which encrypts the messages in a database. Textsecure was chosen since its a commonly used application for securing your text messages in transit (both sender and receiver would need to have it installed) and open source so we could get a better understanding on how it works. 
+  TextSecure\footnote{\url{https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms}}, 
+  which encrypts the messages in a database. Textsecure was chosen since its a commonly used application for securing your text 
+  messages in transit (both sender and receiver would need to have it installed) and open source so we could get a better understanding 
+  on how it works. 
   \subsubsection{Screen lock}
   We also did a memory dump after creating a screen lock with a PIN code and using a passphrase.

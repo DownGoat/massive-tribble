@@ -1,31 +1,33 @@
 \section{Conclusion}
-Our project has proved that the volitile memory of android devices have valueable information for use 
+Our project has proved that the volatile memory of android devices have valuable information for use 
 in a forensic investigation.
 
 %Time is a issue, precompiled\hardware atlernatives.
 Each phone has its own ROM and kernel, therefore you would need kernels that support loading kernel 
-modules. These should be precompiled since time is a issue when dealing with volatilie memory. An 
+modules. These should be pre-compiled since time is a issue when dealing with volatile memory. An 
 alternative would be to purchase hardware toolkits that can extract memory from the chip itself 
-\footnote{Side med hw tool}
+\footnote{Side med hw tool} % HUSK
 
 %anti-forensic; Secure apps. 5.0 Change to art, no plugin
-Encryption and secure apps can make finding forensic investigation more difficult and we haven't found 
-any research that has implemented countermesures against these anti-forensic tools. In newer versions 
+Encryption and secure applications can make finding forensic investigation more difficult and we haven't found 
+any research that has implemented countermeasures against these anti-forensic tools. In newer versions 
 of android the dalvik virtual machine has been replaced with android runtime(ART) where one of the new 
 features have a smaller memory footprint. This is a issue in the forensic community where there is no 
 plugin available that supports ART.
 
 %reliable, luck? needle in the heystack
-Our method for analysing the memory isnt nessaseraly realistic when used in forensics investigation, however it proves what might be available in the memory of android devices. To automate this process might make information from memory easier accessable and more reliable.
+Our method for analysing the memory is not necessarily realistic when used in forensics investigation, 
+however it proves what might be available in the memory of android devices. 
+To automate this process might make information from memory easier accessible and more reliable.
 
 %malware (trojan horse defence)
-Malware could have certan caracerictis that could be shown in memory, since mobile phones often stay 
-powered on for longer periods they might be attractive targets for malware only running in memmory. 
-This could possibly used for investigating cases with the trojan horse defense.
+Malware could have certain characteristic that could be shown in memory, since mobile phones often stay 
+powered on for longer periods they might be attractive targets for malware only running in memory. 
+This could possibly used for investigating cases with the trojan horse defence.
 
 \subsection{Real phone vs. emulator}
 %Research applicable in real phone? Is a emulator environment relevant?
-The major difference between a real phone and a emulator is when aquireing the memory dump is much 
+The major difference between a real phone and a emulator is when acquiring the memory dump is much 
 easier. When using a real phone you run the risk of loosing live memory when trying to cooldboot and 
 memory segments can be overwritten by the time a forensic analyst can take a dump.
 
