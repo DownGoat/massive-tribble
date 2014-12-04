@@ -1,6 +1,6 @@
 \section{Experiments}
 We did five dumps of the memory;
-  \subsubsection{Clean dump}
+  \subsection{Clean dump}
   The first dump we did was right after boot, with factory settings and nothing done to the device 
   other than transferring the LiME LKM to the SD-card.
   
@@ -21,7 +21,7 @@ no significant use and compare them to the other experiments.
   files containing information from internal logfiles as syslog (dmesg). It also 
   recovered some png files with pictures used by the android launcher.
   
-  \subsubsection{Pastebin entry}
+  \subsection{Pastebin entry}
   The second dump we did was after creating a pastebin entry on pastebin.com using 
   the stock android browser (for 4.2.2),
   to see if we could find our entry in the memory.
@@ -43,7 +43,7 @@ no significant use and compare them to the other experiments.
   find the page it was posted on. 
   %Fant vi teksten som var skrevet også? brukte vi vol til dette? (yarascan) => Ja. Fant den også med strings/hex
   
-  \subsubsection{Standard Text Message}
+  \subsection{Standard Text Message}
   The next dump was after sending a text message to the standard messages application. 
   Since the emulator provides an telnet interface, we where able to send a message 
   using \texttt{sms send <phoneNumber> <textMessage>}.
@@ -53,7 +53,7 @@ no significant use and compare them to the other experiments.
 
   \paragraph{Strings}
   Same as above %?
-  \subsubsection{Secure Text Message}
+  \subsection{Secure Text Message}
   Next we did the same as above, but after installing 
   TextSecure\footnote{\url{https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms}}, 
   which encrypts the messages in a database. Textsecure was chosen since its a commonly 
@@ -65,7 +65,7 @@ no significant use and compare them to the other experiments.
   In some cases the device might have used anti-forensic tools to hide their 
   activity, we wanted to look into what information a memory analysis could 
   retrieve.
-  \subsubsection{Screen lock}
+  \subsection{Screen lock}
   We also did a memory dump after creating a screen lock with a PIN code and using a passphrase.
   
   If the device has a unlocked bootloader it would often be possible to use out 
