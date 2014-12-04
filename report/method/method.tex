@@ -31,12 +31,12 @@ you are editing to fit your system. % teit setning?
 A detailed guide on the setup can be found in the appendix.\\
 
 The emulator was set up on a computer running the latest Ubuntu (Ubuntu 14.04.1 LTS x86\_64).
-The emulator we set up is based on the Nexus 7 (2012) with Android 4.2.2 Jelly Bean 
-(API level 17) and The Linux Kernel 2.6.29. This was chosen because of convenience
-since the guide we followed is using this and the 2.6 Kernel have very few restrictions.
+its based on the Nexus 7 (2012) with Android 4.2.2 Jelly Bean 
+(API level 17) and Linux Kernel 2.6.29. This was chosen because of convenience
+since the guide we followed is using this kernel.
 \subsection{Tools}
-  \subsubsection{Volatility}
-  Volatility is a open source collection of tools used to extract digital
+Strings is usefull tool for getting all strings in a file, while hex editor gives a more detailed overview.
+\paragraph{Volatility} is a open source collection of tools used to extract digital
   artefacts from memory.\footnote{\url{https://github.com/volatilityfoundation/volatility}} 
   The framework is not meant for a live forensic analysis but an offline analysis
   on memory acquired from a live machine or device, see Section \ref{lime} for
@@ -88,10 +88,6 @@ since the guide we followed is using this and the 2.6 Kernel have very few restr
   plugins, since you do not have to reinvent the wheel for every plugin. There
   are plugins for analysing the Dalvik VM, but they are very version specific.
 
-  \subsubsection{PhotoRec}
-  File recovery tool, supports many platforms and file systems, including memory images. 
-  It Can extract images, text files and more.
-  \subsubsection{Strings}
-  Easy tool for getting all strings in a dump.
-  \subsubsection{Hex editor}
-  Useful for looking trough a dump.
+  \paragraph{PhotoRec} is a file recovery tool that supports many platforms and file systems, including memory images. 
+  It Can extract images, text files and more. %Mer på photorec
+
