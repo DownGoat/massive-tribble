@@ -1,38 +1,51 @@
 \section{Further Work}
-Through this project we have been looking at what can be found in cleartext in 
-the memory of android phones to get an idea of how the volatile memory in 
-android devices  can be useful. Based on our findings we can say that there are
-valuable information in the memory that can become relevant in a forensics investigation. 
-From this there are a number of areas that can be researched.
+Through this project we have been looking at what can be
+found in cleartext in the memory of android phones to get
+an idea of how the volatile memory in android devices can
+be useful. Based on our findings we can say that there are
+valuable information in the memory that can become relevant
+in a forensics investigation. From this there are a number of
+areas that can be researched.
 
-The first and most critical area to make this valuable would be looking into how 
-to actually get the memory of a live device, using the technique we have with 
-the emulator, in most cases require a "cold" reboot of the device risking degrading 
+The first and most critical area to make this valuable would
+be looking into how to actually get the memory of a live
+device, using the technique we have with the emulator, in most
+cases require a ”cold” reboot of the device risking degrading
 the volatile memory.
 
-Another topic for further work would be in developing tools to look through the 
-memory data automatically, as in most cases you don't know exactly what you will 
-be looking for some looking for some sort of pattern to find data consistently. 
-This gets increasingly important as the memory capacity in these devices is increasing 
-quickly. The leap from our emulated device with 800MB memory to newer devices 
-with 2GB and higher capacity would make it not feasible to go through the data manually.
+Another topic for further work would be in developing tools
+to look through the memory data automatically, as in most
+cases you don’t know exactly what you will be looking for.
+This would make a tool thats looking for patterns to find information useful.
+This gets increasingly important as the memory capacity
+in these devices is increasing quickly. The leap from our
+emulated device with 800MB memory to newer devices with
+2GB and higher capacity would make it not feasible to go
+through the data manually.
 
-The fact that our research into secure applications isn't entirely conclusive, we
-couldn't find the encryption key or any messages sent or received using this 
-secure application, but the key is most likely in the memory. How 
-securely stored this is might be despite the fact its not in clear text, 
-isn't currently known. Using a different technique and a deeper search might 
-reveal different results.
+The fact that our research into secure applications isn’t
+entirely conclusive, we couldn’t find the encryption key or any
+messages sent or received using this secure application, but
+they key is most likely in the memory. How securely hashed
+or stored this is might be despite the fact its not in clear text
+isn’t currently known. Using a different technique and a deeper
+search might reveal different results.
 
-Lastly, and this is a topic we intended to research further in our own paper is 
-how long different sorts of information stays in memory. This is probably 
-something that will be hard to test using an emulator as actual live devices will 
-have a lot more applications and background services running. And you won't be likely to 
-get as clean a memory as we did with our experiments with the emulator. 
+Lastly, and this is a topic we intended to research further
+in our own paper is how long different sorts of information
+stays in memory. This is probably something that will be hard
+to test using an emulator, as actual live devices will have a lot
+more apps and background services running. And you won’t be
+likely to get as clean a memory as we did with our experiments
+using the emulator.
 
-In this paper we have only looked Android running with the Dalvik virtual machine, 
-in the more recent versions of Android the experimental Android RunTime(ART) 
-virtual machine is introduced. This changes how applications are compiled and run, from 
-Dalviks just-in-time memory management to ART’s ahead-of-time management. We 
-believe this might impact how memory is managed, and might cause different 
-results to the ones presented in this paper and might be a topic for further research. \\
+In this paper we have only looked Android running with
+the Dalvik virtual machine, in the more recent versions of
+Android the experimental Android RunTime(ART) virtual
+machine is introduced. This changes how apps are compiled
+and run, from Dalviks just-in-time memory management to
+ART’s ahead-of-time management. We believe this might
+impact how memory is manage, and might cause different
+results to the ones presented in this paper and might be a
+topic for further research.
+
