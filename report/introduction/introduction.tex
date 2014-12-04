@@ -1,10 +1,5 @@
 \section{Introduction}
 
-%In computer forensics, memory/RAM have been common source of digital evidence. Modern smartphones also use memory for 
-%running OS, application and user data which might be of value in forensics investigations. Especially when encryption 
-%keys are required to decrypt critical digital evidence and when passwords for web and cloud services are needed to 
-%access more sources of evidence. How to preserve digital evidence when analysing smartphone memory/RAM?
-
 In digital forensics, memory is an important source of evidence. Most of the data from applications is at some time 
 stored in the memory of the device. Modern smartphones use memory of larger sizes such as a conventional computer (laptop, 
 desktop etc.). The memory in these devices contain user and application data which might be valuable in forensic 
@@ -13,17 +8,13 @@ network information \cite{acq_vol_android_mem}. Other valuable information store
 web-history and encryption keys. Encryption keys might be highly valuable as forensic evidence. If the encryption keys 
 are acquired, a investigator could get access to valuable information that is encrypted. \\
 
-There are several ways of acquiring memory from an Android device. When having hardware access its possible 
-to extract memory from the chips on the device, other methods by using software would in most cases require 
-a unlocked bootloader and root access. As presented by \cite{acq_vol_android_mem}, 
-one way to get root access is to use a privilege escalation exploit. \\%more about this
+The main ways of acquiring memory from Android devices is by installing kernel 
+moudules that allwos you to extract the data. Typically this requiers one to
+have high user priveleges (root) on the device, and you often will not have 
+this on devices you have to analysis. To then be able to extract the memory you 
+will need to escelate your privliges on the device, one way to achive this is by
+a privledge escalation exploit as presented by Case et al\cite{acq_vol_android_mem}.\\
 
-%Acquiring memory may be quite simple in itself. But the other half of the job is to analyze the data.
-%Analyzing such big data sets manually is not feasible. To analyze the data faster and more accurately, certain tools could be used.
-
-% Liker ikke "flyten" i dette avsnittet .P
-
-%To maintain evidence integrity, evidence acquisition should be performed automatically.
 
 Memory is highly volatile, acquiring it can therefore be a challenge. Memory is 
 considered volatile for multiple reasons. It requires  power to be kept present
