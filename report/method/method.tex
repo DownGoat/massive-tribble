@@ -94,22 +94,3 @@ This was chosen because of convenience, since the guide we followed is using thi
   Easy tool for getting all strings in a dump.
   \subsubsection{Hex editor}
   Useful for looking trough a dump.
-\subsection{Experiments}
-We did five dumps of the memory;
-  \subsubsection{Clean dump}
-  The first dump we did was right after boot, with factory settings and nothing done to the device 
-  other than transferring the LiME LKM to the SD-card.
-  \subsubsection{Pastebin entry}
-  The second dump we did was after creating a pastebin entry on pastebin.com using the stock android browser (for 4.2.2),
-  to see if we could find our entry in the memory.
-  \subsubsection{Standard Text Message}
-  The next dump was after sending a text message to the standard messages application. Since the emulator provides an telnet 
-  interface, we where able to send a message using \texttt{sms send <phoneNumber> <textMessage>}.
-  \subsubsection{Secure Text Message}
-  Next we did the same as above, but after installing 
-  TextSecure\footnote{\url{https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms}}, 
-  which encrypts the messages in a database. Textsecure was chosen since its a commonly used application for securing your text 
-  messages in transit (both sender and receiver would need to have it installed) and open source so we could get a better understanding 
-  on how it works. 
-  \subsubsection{Screen lock}
-  We also did a memory dump after creating a screen lock with a PIN code and using a passphrase.
