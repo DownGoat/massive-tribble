@@ -18,9 +18,9 @@ no significant use and compare them to the other experiments.
   and other use full information about the system.
 
   \subsubsection{PhotoRec}
-  This program managed to get alot of files, such as .java code files and .txt 
+  This program managed to get alot of files, such as java code files and txt 
   files containing information from internal logfiles as syslog (dmesg). It also 
-  recovered some .png files with pictures used by the android launcher.
+  recovered some png files with pictures used by the android launcher.
 
 \subsection{Pastebin entry}
 When starting to analyze this dump, we first started with the most basic. 
@@ -35,7 +35,7 @@ examining the memory segments before the hit on our string.
   \subsubsection{Strings}
   Strings would show alot of results since there are often many hits on readable 
   data in these kind of dumps, by piping the output to grep we where able to 
-  filter out text we wanted. Simply searching for pastebin.com/ we where able to 
+  filter out text we wanted. Simply searching for pastebin.com we where able to 
   find the page it was posted on. 
   %Fant vi teksten som var skrevet også? brukte vi vol til dette? (yarascan) => Ja. Fant den også med strings/hex
 
