@@ -1,75 +1,13 @@
-\section{Appendics 1}
+\section{Appendix 1}
 
 \subsection{linux\_pstree output}
 Shortend output from the \textit{linux\_pstree} Volatility plugin.
-\begin{lstlisting}
-$  python vol.py --plugins=plugins --profile=LinuxGolfish-2_6_29ARM -f ~/dumps/lime5.dump linux_pstree
-Volatility Foundation Volatility Framework 2.4
-Name                 Pid             Uid            
-init                 1               0              
-.ueventd             32              0              
-.servicemanager      33              1000           
-.vold                34              0              
-.netd                36              0              
-.debuggerd           37              0              
-.rild                38              1001           
-.surfaceflinger      39              1000           
-.zygote              40              0              
-..system_server      292             1000           
-..GC                 294             1000           
-..Signal Catcher     297             1000           
-..JDWP               298             1000           
-..Compiler           299             1000           
-..ReferenceQueueD    300             1000           
-..FinalizerDaemon    301             1000           
-..FinalizerWatchd    302             1000           
-..Binder_1           303             1000           
-..Binder_2           304             1000           
-..Binder_3           305             1000           
-..SensorService      306             1000           
-..er.ServerThread    307             1000           
-..UI                 308             1000           
-..WindowManager      309             1000           
-..ActivityManager    310             1000           
-..ProcessStats       312             1000           
-..PackageManager     313             1000           
-..FileObserver       314             1000           
-..AccountManagerS    315             1000           
-..SyncHandlerThre    316             1000 
-\end{lstlistings}
+
+\includegraphics[scale=0.5]{linux_pstree.png}
 
 
 \subsection{linux\_proc\_maps output}
 Shortend output from the \textit{linux\_proc\_maps} Volatility plugin, for the
 Textsecure plugin.
 
-\begin{lstlisting}
-$ python vol.py --plugins=plugins --profile=LinuxGolfish-2_6_29ARM -f ~/dumps/lime5.dump linux_proc_maps -p 1084
-Volatility Foundation Volatility Framework 2.4
-Pid      Start              End                Flags       Pgoff Major  Minor  Inode      File Path
--------- ------------------ ------------------ ------ ---------- ------ ------ ---------- ---------
-    1084 0x000000002a000000 0x000000002a002000 r-x           0x0     31      0        811 /system/bin/app_process
-    1084 0x000000002a002000 0x000000002a003000 r--        0x1000     31      0        811 /system/bin/app_process
-    1084 0x000000002a003000 0x000000002a351000 rw-           0x0      0      0          0 [heap]
-						.
-						.
-						.
-    1084 0x000000004060f000 0x0000000040613000 rw-           0x0      0      0          0 
-    1084 0x0000000040613000 0x0000000040617000 r-x           0x0     31      0        626 /system/lib/libgabi++.so
-    1084 0x0000000040617000 0x0000000040618000 r--        0x3000     31      0        626 /system/lib/libgabi++.so
-    1084 0x0000000040618000 0x0000000040619000 rw-        0x4000     31      0        626 /system/lib/libgabi++.so
-    1084 0x0000000040619000 0x0000000040728000 r-x           0x0     31      0        522 /system/lib/libicui18n.so
-    1084 0x0000000040728000 0x0000000040729000 ---           0x0      0      0          0 
-    1084 0x0000000040729000 0x000000004072f000 r--      0x10f000     31      0        522 /system/lib/libicui18n.so
-    1084 0x000000004072f000 0x0000000040730000 rw-      0x115000     31      0        522 /system/lib/libicui18n.so
-    1084 0x0000000040730000 0x00000000407d6000 r-x           0x0     31      0        517 /system/lib/libdvm.so
-    1084 0x00000000407d6000 0x00000000407da000 r--       0xa5000     31      0        517 /system/lib/libdvm.so
-    1084 0x00000000407da000 0x00000000407df000 rw-       0xa9000     31      0        517 /system/lib/libdvm.so
-    1084 0x00000000407df000 0x00000000407e1000 rw-           0x0      0      0          0 
-    1084 0x00000000407e1000 0x00000000407e6000 r-x           0x0     31      0        629 /system/lib/libGLESv1_CM.so
-    1084 0x00000000407e6000 0x00000000407e7000 r--        0x4000     31      0        629 /system/lib/libGLESv1_CM.so
-						.
-						.
-						.
-\end{lstlisting}
-
+\includegraphics[scale=0.5]{linux_proc_maps.png}
