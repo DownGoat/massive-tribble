@@ -56,11 +56,13 @@ no significant use and compare them to the other experiments.
   \subsection{Secure Text Message}
   Next we did the same as above, but after installing 
   TextSecure\footnote{\url{https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms}}, 
-  which encrypts the messages in a database. Textsecure was chosen since its a commonly 
+  which encrypts the messages in a database. TextSecure was chosen since its a commonly 
   used application for securing your text 
   messages in transit (both sender and receiver would need to have it installed) and open source 
   so we could get a better understanding 
   on how it works. 
+  
+  \includegraphics[scale=0.5]{textsecure.png}
   
   In some cases the device might have used anti-forensic tools to hide their 
   activity, we wanted to look into what information a memory analysis could 
@@ -76,3 +78,5 @@ no significant use and compare them to the other experiments.
   \paragraph{Strings}
   By searching for the pincode and passphrase we saw a pattern 
   %mer info om dette, var noe tekst etter koden som var lik  elns.
+  
+  \includegraphics[scale=0.5]{strings_grep_pass.png}
