@@ -1,12 +1,4 @@
 \section{Further Work}
-Through this project we have been looking at what can be
-found in cleartext in the memory of Android phones to get
-an idea of how the volatile memory in Android devices can
-be useful. Based on our findings we can say that there are
-valuable information in the memory that can become relevant
-in a forensics investigation. From this there are a number of
-areas that can be researched.
-
 The first and most critical area to make this valuable would
 be looking into how to actually get the memory of a live
 device, using the technique we have with the emulator, in most
@@ -27,7 +19,7 @@ The fact that our research into secure applications is not
 entirely conclusive, we could not find the encryption key or any
 messages sent or received using this secure application, but
 they key is most likely in the memory. How securely hashed
-or stored this is might be despite the fact its not in clear text
+or stored this is might be despite the fact it is not in clear text
 is not currently known. Using a different technique and a deeper
 search might reveal different results.
 
@@ -35,7 +27,7 @@ Lastly, and this is a topic we intended to research further
 in our own paper is how long different sorts of information
 stays in memory. This is probably something that will be hard
 to test using an emulator, as actual live devices will have a lot
-more apps and background services running. And you will nott be
+more apps and background services running. And you will not be
 likely to get as clean a memory as we did with our experiments
 using the emulator.
 
@@ -43,9 +35,13 @@ In this paper we have only looked Android running with
 the Dalvik VM, in the more recent versions of
 Android the experimental Android RunTime(ART) virtual
 machine is introduced. This changes how apps are compiled
-and run, from Dalviks just-in-time memory management to
-ART’s ahead-of-time management. We believe this might
-impact how memory is manage, and might cause different
-results to the ones presented in this paper and might be a
-topic for further research.
+and run, from Dalviks \textit{just-in-time compilation} to
+ART’s \textit{ahead-of-time compilation}. ART still uses the
+\textit{dex} bytecode format that Dalvik uses for backward
+compability, but it is very unlikely that any Dalvik specific
+Volatility plugins will work with ART. To overcome this plugins
+needs to be able to read and understand where data is stored in the memory of
+ART. When this work is done the application specific plugins will only need
+minor modifications to work with the underlying code that reads the ART instead
+of Dalvik.
 

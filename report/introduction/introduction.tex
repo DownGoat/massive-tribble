@@ -6,7 +6,7 @@
 %access more sources of evidence. How to preserve digital evidence when analysing smartphone memory/RAM?
 
 In digital forensics, memory is an important source of evidence. Most of the data from applications is at some time 
-stored in the memory of the device. Modern smartphones use memory of larger sizes like a conventional computer (laptop, 
+stored in the memory of the device. Modern smartphones use memory of larger sizes such as a conventional computer (laptop, 
 desktop etc.). The memory in these devices contain user and application data which might be valuable in forensic 
 investigations. Data kept in the memory include information about running and terminated processes, open files and 
 network information \cite{acq_vol_android_mem}. Other valuable information stored in memory can be image files, GPS data, 
@@ -25,23 +25,30 @@ one way to get root access is to use a privilege escalation exploit. \\%more abo
 
 %To maintain evidence integrity, evidence acquisition should be performed automatically.
 
-Memory is highly volatile, acquiring it can therefore be a challenge. Memory is considered volatile for multiple reasons. 
-It requires  power to be kept present \cite{the_art_of_mem} and gets written to approximately every 10ns in regards of 
-order of volatility. %rar slutt på setning? nødvendig å nevne oov?
-It is not possible to use a write-blocker on memory as you could when acquiring evidence from for instance a hard drive 
-or a flash memory medium. Therefore, like when dealing with other sources of digital evidence, it is important to gather 
-the evidence as soon as possible. \\
+Memory is highly volatile, acquiring it can therefore be a challenge. Memory is 
+considered volatile for multiple reasons. It requires  power to be kept present
+\cite{the_art_of_mem} and gets written to approximately every $10ns$ in regards
+of order of volatility. %rar slutt på setning? nødvendig å nevne oov?
+It is not possible to use a write-blocker on memory as you could when acquiring 
+evidence from for instance a hard drive or a flash memory medium. Therefore, to 
+the same degree as when dealing with other sources of digital evidence, it is 
+important to gather the evidence as soon as possible. \\
 
 %How to preserve digital evidence when analyzing smartphone memory/RAM?
-Different type of applications use different amounts of memory. Games use more memory than "regular" applications.
-Since games use more memory, also dynamically, objects not being used in the memory can be erased. This can result in
-loss of evidence that may be useful in an investigation.\\
+Different type of applications use different amounts of memory. Games use more 
+memory than applications that is not as graphical. Since games allocates more 
+memory, also dynamically, objects not being used in the memory can be erased. 
+This can result in loss of evidence that may be useful in an investigation.\\
 
-Analyzing memory of android devices is more difficult than on other operating systems because of the memory address 
-each process receive (including system processes), is fairly random by use of address space layout randomization(ASLR). 
-Therefore, investigating memory used by a specific process in certain locations/addresses can be very difficult.
-ASLR was mainly developed for preventing buffer overflows \cite{prot_aslr}. But it also makes it more difficult when 
-analysing memory.\\
+\textit{Address Space Layout Randomization} (ASLR) makes analysing the memory 
+of processes more difficult, because the memory is not laid out in a linear 
+fashion. This means that you have to leverage global data structures more for
+locating where in memory data will be. ASLR will also allocate the data in 
+different parts of the memory each time the same process is started. This means
+that some piece of data, belonging to one process,  will not be in the same 
+place in memory every time you start the process. ASLR was mainly developed for 
+preventing buffer overflows \cite{prot_aslr}. But it also makes it more difficult
+to analysing memory.\\
 
 
 
