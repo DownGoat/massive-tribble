@@ -7,19 +7,20 @@ progress, it is the only known way to get access to memory of all running proces
 
 In 2011 J. Sylve et al. presented a paper that described a forensic sound 
 approach of acquiring Android memory. \cite{acq_vol_android_mem} This paper looked 
-into ways of obtaining memory, with different tools and different approaches. In 
-their experiment, with an emulator, they performed a memory dumping method that 
-is called \textit{pmemsave} and compared it to other ways of dumping memory. 
-When compared to another method called Droid Memory Dumpstr (DMD) it was over 
-99\% identical. Since the memory dumps takes time, in our experiment it took us 
-5 minutes to dump 800mb of memory, some changes will naturally occur in the memory.\\
+into ways of obtaining memory, with different tools and different approaches. The paper 
+tries different ways to aquire memory and by using a feature(pmemsave) in the emulator. 
+This creates a perfect snapshoot of the memory and could compare memory dumps from other 
+tools and see how much they differed from the first. When compared to another method 
+called Droid Memory Dumpstr (DMD) it was over 99\% identical. Since the memory dumps 
+takes time, in our experiment it took us 5 minutes to dump 800mb of memory, some 
+changes will naturally occur in the memory.\\
 
-Based on these results, they believe that this method for dumping memory is a 
-forensic sound process and can be used as evidence in court. To analysis the data 
-extracted, different methods can be used, in this project they also used Volatility.
-One of the key benefits of this open source program is the ability to make your 
-own plugin. They made a plugin that separates the memory that belongs to a single 
-process to make it much easier to manually analyse it. Unfortunately we were not 
+Based on these results, the paper presents this method for dumping memory is a 
+forensic sound process and can be used as evidence in court. To analyse the memory 
+acquired, different methods can be used, this paper also used Volatility.
+One of the key benefits of Volatility is the ability to make your 
+own plugins. The paper presents a new plugin that finds the regions where in memory 
+each process is mapped, to make it easier to manually analyse it. Unfortunately we were not 
 able to find this plugin to test it.\\
 % Hvem er they? Var det ikke disse pluginsa vi testa?
 
