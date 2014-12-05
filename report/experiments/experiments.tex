@@ -23,7 +23,13 @@ memory. When starting to analyze this dump, we first started with the most basic
 Strings and hex editor; by searching for \texttt{pastebin.com}. Other findings in
 this process included a timeline on how the user got to the page patebin.com by 
 examining the memory segments before the hit on our string.\\
-\includegraphics[scale=0.5]{strings_grep_pastebin.png}
+\begin{wrapfigure}{r}{0.5\textwidth}
+   \vspace{-20pt}
+    \begin{center}
+        \includegraphics[scale=0.48]{strings_grep_pastebin.png}
+   \end{center}
+    \vspace{-20pt}
+\end{wrapfigure}
 
 %timeline wtf?
 
@@ -47,7 +53,7 @@ dump using previous mentioned tools to do a text search. In the output of the
 \texttt{yarascan} plugin we could also see the time, and phone number that was
 used to send the message.
   
-\subsection{Secure Text Message}
+\subsection{Secure application - TextSecure}
 Next we repeated the same experiment as above, but using the TextSecure
 \footnote{\url{https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms}}, 
 messaging application, which encrypts messages on the disk and over the wire.
@@ -59,7 +65,13 @@ In some cases the device might have used anti-forensic tools to hide their
 activity, we wanted to look into what information a memory analysis could 
 retrieve. In this experiment we were not able to retrive any data of the message 
 data.
-\includegraphics[scale=0.5]{textsecure.png}
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \vspace{-20pt}
+    \begin{center}
+        \includegraphics[scale=0.48]{textsecure.png}
+    \end{center}
+    \vspace{-20pt}                                                                                                                                                                 
+\end{wrapfigure}
 
 \subsection{Screen lock}
 We also did a memory dump after creating a screen lock with a PIN code and using a passphrase.
@@ -69,11 +81,15 @@ We also did a memory dump after creating a screen lock with a PIN code and using
   filter out text we wanted. Simply searching for pastebin.com we where able to 
   find the page it was posted on. 
   %Fant vi teksten som var skrevet også? brukte vi vol til dette? (yarascan) => Ja. Fant den også med strings/hex
-  
+ 
+
 If the device has a unlocked bootloader it would often be possible to use out 
 method to retrieve memory of a device without wiping off all data from the 
 device. This experiment was done to see if we could find a passphrase or 
 pincode from the memory dump.
-  By searching for the pincode and passphrase we saw a pattern 
-  \includegraphics[scale=0.5]{strings_grep_pass.png}\\
-  \includegraphics[scale=0.5]{strings_grep_pin.png}
+  By searching for the pincode and passphrase we saw a pattern \\
+\includegraphics[scale=0.48]{strings_grep_pin.png}\\
+
+
+\includegraphics[scale=0.48]{strings_grep_pass.png}
+
