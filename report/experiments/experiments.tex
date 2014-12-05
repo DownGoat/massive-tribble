@@ -6,12 +6,12 @@ done to the device other than transferring the LiME LKM to the SD-card. The
 reason for this dump so we could see if we had set up our environment correctly 
 and could read memory of the phone. The dump was also great for use when 
 comparing to later dumps where we could see differences from a system with no 
-significant use and compare them to the other experiments. This expiriment
-thus serverd more as a control, and we were not looking for any specific data in
-memory. We used the experiement to test if we hade set up and configured 
+significant use and compare them to the other experiments. This experiment
+thus served more as a control, and we were not looking for any specific data in
+memory. We used the experiment to test if we had set up and configured 
 Volatility correctly. We were able to run Volatility on the memory dump, an 
 verified that we got out sensible data from it, such as process list, and 
-process tree. We also tested PhotoRec on the memory dump, and it successfuly
+process tree. We also tested PhotoRec on the memory dump, and it successfully
 extracted whole, and partial images, text files, and java code and class files.
 It also managed to find syslog(dmesg), and other log files that could be useful
 in a forensic investigation.
@@ -21,7 +21,7 @@ The second dump we did was after creating a pastebin entry on pastebin.com using
 the stock Android browser (for 4.2.2), to see if we could find our entry in the 
 memory. When starting to analyze this dump, we first started with the most basic.
 Strings and hex editor; by searching for \texttt{pastebin.com}. Other findings in
-this process included a timeline on how the user got to the page patebin.com by 
+this process included a timeline on how the user got to the page pastebin.com by 
 examining the memory segments before the hit on our string.\\
 
 \includegraphics[scale=0.48]{strings_grep_pastebin.png}
@@ -32,7 +32,7 @@ Finding the message, and link for the pastebin entry with \texttt{strings} and a
 hex editor was not a problem, this was accomplished by a simple string search for
 the string \textit{pastebin}. We were also able to find the data using Volatility's
 \texttt{yarascan} plugin. The plugin allows searching by using simple strings,
-or with more complex rules. For unknow reasons Volatility was not able to find
+or with more complex rules. For unknown reasons Volatility was not able to find
 the list of running processes of this memory dump, and it had to search through 
 the whole memory dump for finding the entry instead of reducing the search space 
 by specific PID. 
@@ -58,7 +58,7 @@ installed) and it is open source so we could get a better understanding on
 how it manages the keys and data in memory.  
 In some cases the device might have used anti-forensic tools to hide their 
 activity, we wanted to look into what information a memory analysis could 
-retrieve. In this experiment we were not able to retrive any data of the message 
+retrieve. In this experiment we were not able to retrieve any data of the message 
 data.
 \begin{wrapfigure}{r}{0.5\textwidth}
     \begin{center}
@@ -69,12 +69,14 @@ data.
 \subsection{Screen lock}
 We also did a memory dump after creating a screen lock with a PIN code and using a passphrase.
   \paragraph{Strings}
-  Strings would show alot of results since there are often many hits on readable 
+  Strings would show a lot of results since there are often many hits on readable 
   data in these kind of dumps, by piping the output to grep we where able to 
   filter out text we wanted. Simply searching for pastebin.com we where able to 
-  find the page it was posted on. 
+  find the page it was posted on. We also found the exact message posted to pastebin with strings.
   %Fant vi teksten som var skrevet også? brukte vi vol til dette? (yarascan) => Ja. Fant den også med strings/hex
- 
+
+There is also a Volatility plugin created to get the PIN or passphrase from the memory dump (dalvik_password),  %??
+But we had no success using this plugin.
 
 If the device has a unlocked bootloader it would often be possible to use out 
 method to retrieve memory of a device without wiping off all data from the 
@@ -95,10 +97,11 @@ pincode from the memory dump. By searching for the pincode and passphrase we saw
         \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[scale=0.48]{strings_grep_pass.png}
                 \caption{This image shows the same, but searching for a
-                password insted, notic what seems to be half of a hash appended
+                password instead, notice what seems to be half of a hash appended
             to the password and pin in both images.}
                 \label{fig:tiger}
         \end{subfigure}
         \vspace{-20pt}
 
 \end{figure}
+

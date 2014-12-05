@@ -1,6 +1,6 @@
 \section{Further Work}
 A topic for further work would be in developing tools
-to analyse the memory. In most cases you do not know exactly what you will be looking for.
+to analyze the memory. In most cases you do not know exactly what you will be looking for.
 This gets increasingly important as the memory capacity
 in these devices is increasing quickly. The leap from our
 emulated device with 1024 MB memory to newer devices with
@@ -16,22 +16,22 @@ is not currently known. Using a different technique and a deeper
 search might reveal different results.
 
 Lastly, and this is a topic we intended to research further
-in our own paper is how long different sorts of information
+in our own paper, is how long different sorts of information
 stays in memory. This is probably something that will be hard
 to test using an emulator, as actual live devices will have a lot
 more apps and background services running. And you will not be
 likely to get as clean a memory as we did with our experiments
 using the emulator.
 
-In this paper we have only looked Android running with
-the Dalvik VM, in the more recent versions of
+In this paper we have only looked at Android running with
+the Dalvik VM. In the more recent versions of
 Android the experimental Android RunTime(ART) virtual
 machine is introduced. This changes how apps are compiled
 and run, from Dalviks \textit{just-in-time compilation} to
 ART’s \textit{ahead-of-time compilation}. ART still uses the
 \textit{dex} bytecode format that Dalvik uses for backward
-compability, but it is very unlikely that any Dalvik specific
-Volatility plugins will work with ART. To overcome this plugins
+compatibility, but it is very unlikely that any Dalvik specific
+Volatility plugins will work with ART. To overcome this, plugins
 needs to be able to read and understand where data is stored in the memory of
 ART. When this work is done the application specific plugins will only need
 minor modifications to work with the underlying code that reads the ART instead
