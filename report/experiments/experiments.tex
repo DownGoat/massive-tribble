@@ -73,9 +73,11 @@ We also did a memory dump after creating a screen lock with a PIN code and using
   Strings would show alot of results since there are often many hits on readable 
   data in these kind of dumps, by piping the output to grep we where able to 
   filter out text we wanted. Simply searching for pastebin.com we where able to 
-  find the page it was posted on. 
+  find the page it was posted on. We also found the exact message posted to pastebin with strings.
   %Fant vi teksten som var skrevet også? brukte vi vol til dette? (yarascan) => Ja. Fant den også med strings/hex
- 
+
+There is also a Volatility plugin created to get the PIN or passphrase from the memory dump (dalvik_password),  %??
+But we had no success using this plugin.
 
 If the device has a unlocked bootloader it would often be possible to use out 
 method to retrieve memory of a device without wiping off all data from the 
@@ -99,3 +101,4 @@ pincode from the memory dump. By searching for the pincode and passphrase we saw
         \end{subfigure}
 
 \end{figure}
+
