@@ -12,7 +12,7 @@ memory. We used the experiment to test if we had set up and configured
 Volatility correctly. We were able to run Volatility on the memory dump, an 
 verified that we got out sensible data from it, such as process list, and 
 process tree. We also tested PhotoRec on the memory dump, and it successfully
-extracted whole, and partial images, text files, and Java code and class files.
+extracted whole and partial images, text files, and Java code and class files.
 It also managed to find syslog(dmesg), and other log files that could be useful
 in a forensic investigation.
   
@@ -39,7 +39,7 @@ by specific PID.
   
 \subsection{Standard Text Message}
 In the third experiment we sent a text message to the standard messages application.
-This was done by using the emulators telnet interface, where one can send a message
+This was done by using the emulators’ telnet interface, where one can send a message
 using the form: \texttt{sms send <phoneNumber> <textMessage>}. After sending the
 message, a dump of the memory was taken. We wanted to see if it was possible to 
 see recently received messages from the memory dump. Since we already knew the 
@@ -52,7 +52,7 @@ used to send the message.
 Next we repeated the same experiment as above, but using the TextSecure
 \footnote{\url{https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms}}, 
 messaging application, which encrypts messages on the disk and over the wire.
-TextSecure was chosen since its a commonly used application for securing your 
+TextSecure was chosen since it is a commonly used application for securing your 
 text messages in transit (both sender and receiver would need to have it 
 installed) and it is open source so we could get a better understanding on 
 how it manages the keys and data in memory.  
@@ -70,8 +70,8 @@ data.
 We also did a memory dump after creating a screen lock with a PIN code and using a passphrase.
   \paragraph{Strings}
   Strings would show a lot of results since there are often many hits on readable 
-  data in these kind of dumps, by piping the output to grep we where able to 
-  filter out text we wanted. Simply searching for pastebin.com we where able to 
+  data in these kind of dumps, by piping the output to grep we were able to 
+  filter out text we wanted. Simply searching for pastebin.com we were able to 
   find the page it was posted on. We also found the exact message posted to pastebin with strings.
   %Fant vi teksten som var skrevet også? brukte vi vol til dette? (yarascan) => Ja. Fant den også med strings/hex
 

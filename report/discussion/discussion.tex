@@ -12,18 +12,18 @@ While many companies give instructions on how to unlock their bootloader, they a
 state that the warranty is voided. However law-regulations in many European countries 
 have better consumer laws that give the consumer rights if the fault %mangel, norsk ord
 is not related to ROM or kernel of the device. Although we therefore would not have 
-any real risk of loosing our rights to the producer we choose not to use our own 
+any real risk of losing our rights to the producer we choose not to use our own 
 devices since there always is some risk involved where the device could be bricked 
 and consumer laws would not be applicable.\\
 
 When conducting scientific experiments, it is important to do something that is 
 reproducible. By using a emulator we can document how it is set up so others can 
-copy the environment and get the same results. Physical devices could be a issue 
+copy the environment and get the same results. Physical devices could be an issue 
 where the device is out of production.
 
 \subsection{Method}
 As stated earlier in the report we had a number of methods we could approach 
-obtaining memory from mobile devices. When choosing method we where looking for one 
+obtaining memory from mobile devices. When choosing method we were looking for one 
 that gave us the most forensic sound evidence. Originally our chosen method was 
 using \textit{pmemsave} %kommando, formatering
 that was mentioned in a earlier paper\cite{acq_vol_android_mem}. However this did 
@@ -36,8 +36,8 @@ running kernel. The kernel also has to support loading of kernel modules. This i
 by default not allowed since it is a security vulnerability. This might be a 
 problem if the device is running a stock ROM, where it would be necessary to obtain 
 the kernel source from the producer of the device. These are often not released for 
-every device and could be a issue when getting evidence in the field. Since time is 
-a issue when dealing with such volatile evidence it could be feasible to have 
+every device and could be an issue when getting evidence in the field. Since time is 
+an issue when dealing with such volatile evidence it could be feasible to have 
 pre-compiled kernels and modules that would work on most common devices. However 
 this might be known by the criminals. %Finnes det noe research på mobiler brukt av kriminelle? statistikk :P
 
@@ -48,7 +48,7 @@ point encryption by use of PKI. As our results have shown we did not see the
 message in the memory dump such as we did when tested against the stock SMS application. 
 However, it might be possible to extract the encryption keys where the database was 
 acquired and decrypt the messages. Since TextSecure is open source it is
-possible to look through it's code and see how it works. We know that at some
+possible to look through its code and see how it works. We know that at some
 point they have used a memory cleaner to clean sensitive memory after it has
 been used.
 \footnote{\url{http://goo.gl/mgDKpO}} 
@@ -65,7 +65,7 @@ open on the device, or else the memory cleaner might overwrite the keys.
 \subsection{Issues during the project}
 During the project we had some obstacles, we got a good start with researching and 
 reading existing papers on the subject. However after we had decided on what 
-direction we would take the project there where multiple issues when building the 
+direction we would take the project there were multiple issues when building the 
 prerequisites for the kernel and emulator. There was some confusion from the guide 
 on Volatility page on what to follow. Since the guide mentioned OS X specifically 
 we did not pay close enough attention to what we would have to deviate from it.
@@ -76,9 +76,9 @@ When using Volatility with a custom profile, our first impression was that it wa
 necessary to create it on each system. However later on, we found out that it was possible 
 to copy the file from other systems.
 
-There where some issues in what we needed when initializing the build environment, when 
-following the instructions from Volatility. Google is referenced and its not clear 
-on how much you need to follow googles instructions. This caused us wasting time 
+There were some issues in what we needed when initializing the build environment, when 
+following the instructions from Volatility. Google is referenced and it is not clear 
+on how much you need to follow googles’ instructions. This caused us wasting time 
 on compiling android source witch was not necessary.
 
 %More - volatility, plugins, building kernel.
