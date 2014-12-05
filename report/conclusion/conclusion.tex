@@ -2,12 +2,10 @@
 Our project has proved that the volatile memory of Android devices have valuable information for use 
 in a forensic investigation. %Time is a issue, precompiled\hardware atlernatives.
 Each phone has its own ROM and kernel, therefore you would need kernels that support loading kernel 
-modules. These should be pre-compiled since time is a issue when dealing with volatile memory. An 
-alternative would be to purchase hardware toolkits that can extract memory from the chip itself 
-\footnote{Side med hw tool} % HUSK
+modules. These should be pre-compiled since time is a issue when dealing with volatile memory.
 
 %anti-forensic; Secure apps. 5.0 Change to art, no plugin
-Encryption and secure applications can make finding forensic investigation more difficult and we have not found 
+Encryption and secure applications can make finding evidence in a forensic investigation more difficult and we have not found 
 any research that has implemented countermeasures against these anti-forensic tools. In newer versions 
 of Android the Dalvik VM has been replaced with Android Runtime(ART) where one of the new 
 features give applications a smaller memory footprint. This is an issue in the forensic community where there is no 
@@ -25,9 +23,9 @@ This could possibly be used for investigating cases with the trojan horse defenc
 
 \subsection{Real phone vs. emulator}
 %Research applicable in real phone? Is an emulator environment relevant?
-The major difference between a real phone and a emulator is when acquiring the memory dump is much 
-easier. When using a real phone you run the risk of losing live memory when trying to cooldboot and 
-memory segments can be overwritten by the time a forensic analyst can take a dump.
+The major difference between a real phone and a emulator is that acquiring the memory dump much 
+easier when using an emulator. When using a real phone you run the risk of losing live memory when trying to cooldboot and 
+memory segments can be overwritten by the time a forensic analyst takes a memory dump.
 
 The memory dump in itself is representable of a real device and gives a clear indication of what 
 information you can expect to find in the memory of Android devices.

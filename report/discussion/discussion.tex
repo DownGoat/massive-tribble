@@ -1,7 +1,7 @@
 \section{Discussion}
 When making choices during this project, we had to take our time frame into account. 
-We also wanted our result to be applicable in court. In this chapter we present the 
-challenges we faced during the project and our choices.
+We also wanted our result to be applicable in forensic case. In this chapter we present the 
+challenges we faced during the project and our decisions.
 
 \subsection{Real phone vs. emulator}
 In a real case scenario, a forensic investigator would receive a physical device 
@@ -63,7 +63,7 @@ TextSecure class the keys are stored. This might require that TextSecure is
 open on the device, or else the memory cleaner might overwrite the keys.
 
 \subsection{Issues during the project}
-During the project we had some obstacles, we got a good start with researching and 
+Under the project we had some obstacles, we got a good start with researching and 
 reading existing papers on the subject. However after we had decided on what 
 direction we would take the project there were multiple issues when building the 
 prerequisites for the kernel and emulator. There was some confusion from the guide 
@@ -73,7 +73,7 @@ The main differences was in the Makefile where the paths had to be edited to our
 system.
 
 When using Volatility with a custom profile, our first impression was that it was
-necessary to create it on each system. However later on, we found out that it was possible 
+necessary to create it on each system. However later we found out it was possible 
 to copy the file from other systems.
 
 There were some issues in what we needed when initializing the build environment, when 
@@ -83,8 +83,9 @@ on compiling android source witch was not necessary.
 
 %More - volatility, plugins, building kernel.
 
-\subsection{Applicable in forensic investigation}
-When doing research on acquiring evidence it is important to see how it correlates 
-to the real world. If the research is highly theoretical and not applicable it 
-could be seen as useless. Here we discuss our thoughts on what would be different 
-from a forensic investigation and our experiments.
+\subsection{Applicable in a forensic investigation}
+This makes it easier to write customized plugins since you can use parts and functions from other plugins.
+To make our research applicable in a forensic investigation, tools to assist in searching for information in 
+the memory would be necessary. This paper is focused on proving what can be found in memory, and we did this 
+by knowing what we was looking for. In a real case you wouldn't know the password or addresses you were looking for.
+This paper gives a better understanding on what information and how it should be acquired during a forensic investigation.

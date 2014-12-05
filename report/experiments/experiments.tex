@@ -71,18 +71,18 @@ We also did a memory dump after creating a screen lock with a PIN code and using
   \paragraph{Strings}
   Strings would show a lot of results since there are often many hits on readable 
   data in these kind of dumps, by piping the output to grep we were able to 
-  filter out text we wanted. Simply searching for pastebin.com we were able to 
-  find the page it was posted on. We also found the exact message posted to pastebin with strings.
-  %Fant vi teksten som var skrevet også? brukte vi vol til dette? (yarascan) => Ja. Fant den også med strings/hex
+  filter out text we wanted. Simply by searching for the passphrase using grep we were able to 
+  find the passphrase.
 
 There is also a Volatility plugin created to get the PIN or passphrase from the
 memory dump (\texttt{dalvik\_password}),  %??
 But we had no success using this plugin.
 
-If the device has a unlocked bootloader it would often be possible to use out 
+If the device has a unlocked bootloader it would often be possible to use our 
 method to retrieve memory of a device without wiping off all data from the 
 device. This experiment was done to see if we could find a passphrase or 
-pincode from the memory dump. By searching for the pincode and passphrase we saw a pattern \\
+pincode from the memory dump. By searching for the pincode and passphrase we saw a pattern,
+see figure a and b. \\
 
 
 \begin{figure}
