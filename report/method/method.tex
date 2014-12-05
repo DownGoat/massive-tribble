@@ -1,4 +1,34 @@
 \section{Methodology and approach}
+When dealing with evidence, you have to consider the order of volatility of
+each component. Although memory is the most volatile compared to flash memory,
+it is necessary to prioritize what information is most valuable to the forensic
+investigation. By using the method presented in our paper, it is likely to
+format /data and /system partitions of the flash memory. This changes the state
+of evidence on a less volatile storage component that might have important
+information stored. There should be procedures in place for each different type
+of investigation to know what order evidence should be acquired. One example
+could be in a child pornography case where evidence from the memory would be
+highly valuable to find logs or accessed pictures, as opposed to investigation
+into piracy of copyrighted material, where evidence is most likely to be larger
+files in the non-volatile memory.\\
+
+To keep chain of custody one should keep a timeline and log for every action
+taken during the investigation. The chain of custody should among other things
+include the names of the people working on the evidence, and  when an action
+takes place, what impact this would have on the evidence. To keep the integrity
+of the evidence, any work should always be done to a copy, and not on the
+original evidence itself, as to keep the integrity of the original evidence.\\
+
+For our experiments we did not have to take into account the order of
+volatility, since we have focused on the memory part of the device only. During
+a real forensic investigation, the order of volatility must be taken into
+account., and using our method could have some impact on the other parts of the
+device. In our experiments we preserve the integrity of the evidence (the
+memory dumps) by only working on copies of the original evidence. The tools we
+have used during our investigation are read-only tools, they do not write or
+change the evidence. This means that every action we performed can be repeated
+on any copy of the evidence.
+
 %IN HERE! More stuff about the methodology in aquiring memory of a device (timelog, important shit to remember, chain of custody etc.)
 \subsection{Methods to aquire memory}
 We found several alternatives for acquisition of memory from Android devices.
@@ -39,8 +69,7 @@ Strings is usefull tool for getting all strings in a file, while hex editor give
 \paragraph{Volatility} is a open source collection of tools used to extract digital
   artefacts from memory.\footnote{\url{https://github.com/volatilityfoundation/volatility}} 
   The framework is not meant for a live forensic analysis but an offline analysis
-  on memory acquired from a live machine or device, see Section \ref{lime} for
-  memory acquisition. Volatility has support for Windows, Mac OS, and Linux, and
+  on memory acquired from a live machine or device. Volatility has support for Windows, Mac OS, and Linux, and
   from version 2.3 they also supported the ARM architecture, this is essential
   for analysing memory on Android devices, as most devices that run Android has a
   ARM architecture. With a memory dump, Volatility can extract information such as
