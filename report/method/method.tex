@@ -1,6 +1,6 @@
 \section{Methodology and approach}
 %IN HERE! More stuff about the methodology in aquiring memory of a device (timelog, important shit to remember, chain of custody etc.)
-\subsection{Methods to aquire memory}
+\subsection{Methods to acquire memory}
 We found several alternatives for acquisition of memory from Android devices.
 \paragraph{dd on} \texttt{/dev/mem} is a very simple method for acquiring memory. But \texttt{/dev/mem} 
 can only be used directly when the kernel is compiled with the \texttt{STRICT\_DEVMEM} flag off or with 
@@ -17,7 +17,7 @@ LiME is formerly known as DMD (Droid Memory Dumpstr).
 the problems described with the other methods.
 \subsection{Environment}
 When starting the project we needed to decide weather to use an physical device 
-or an emulatorto conduct our experiment on. To make the experiment as close to 
+or an emulator to conduct our experiment on. To make the experiment as close to 
 reality as possible it should have been done on a physical device, however, an 
 emulator gives us a close match to reality and is easily replicable. Also, by 
 using an emulator we avoid rooting our own phones, thus we avoid voiding 
@@ -42,13 +42,13 @@ Strings is usefull tool for getting all strings in a file, while hex editor give
   on memory acquired from a live machine or device, see Section \ref{lime} for
   memory acquisition. Volatility has support for Windows, Mac OS, and Linux, and
   from version 2.3 they also supported the ARM architecture, this is essential
-  for analysing memory on Android devices, as most devices that run Android has a
+  for analyzing memory on Android devices, as most devices that run Android has a
   ARM architecture. With a memory dump, Volatility can extract information such as
   running processes, network connections, mounted devices and view the mapped
   memory for processes and kernel modules. Volatility is especially useful when
-  analysing a system compromised by malware, as malware often hides itself in
-  memory to avoid detection. With Volatility the artefacts of the malware can be
-  found, and be analysed. \\
+  analyzing a system compromised by malware, as malware often hides itself in
+  memory to avoid detection. With Volatility the artifacts of the malware can be
+  found, and be analyzed. \\
   
   Volatility can also help when encryption is used on the device, if the device is
   powered down the keys will be lost and you might be unable to use the data 
@@ -63,7 +63,7 @@ Strings is usefull tool for getting all strings in a file, while hex editor give
   The Dalvik VM is the \textit{process virtual
   machine}\footnote{\url{https://en.wikipedia.org/wiki/Dalvik\_\%28software\%29}} for
   Android that is used to run Android application, applications are translated to
-  Dalvik bytecode. This makes the Dalvik VM a good entry point for analysing
+  Dalvik bytecode. This makes the Dalvik VM a good entry point for analyzing
   applications. The first application that starts and runs in a Dalvik VM is the
   \textit{zygote} process. It preloades and initializes classes that are shared
   between different processes, it is also the process that will fork additional
@@ -86,7 +86,7 @@ Strings is usefull tool for getting all strings in a file, while hex editor give
   invoke other plugins from your own, this means you can stitch together
   several other plugins to write your own. This makes it much easier to write
   plugins, since you do not have to reinvent the wheel for every plugin. There
-  are plugins for analysing the Dalvik VM, but they are very version specific.
+  are plugins for analyzing the Dalvik VM, but they are very version specific.
 
   \paragraph{PhotoRec} is a file recovery tool that supports many platforms and file systems, including memory images. 
   It Can extract images, text files and more. %Mer på photorec
