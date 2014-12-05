@@ -69,6 +69,17 @@ direction we would take the project there where multiple issues when building th
 prerequisites for the kernel and emulator. There was some confusion from the guide 
 on Volatility page on what to follow. Since the guide mentioned OS X specifically 
 we did not pay close enough attention to what we would have to deviate from it.
+The main differences was in the Makefile where the paths had to be edited to our
+system.
+
+When using Volatility with a custom profile, our first impression was that it was
+necessary to create it on each system. However later we found out it was possible 
+to copy the file from other systems.
+
+There where some issues in what we needed when initializing the build environment, when 
+following the instructions from Volatility. Google is referenced and its not clear 
+on how much you need to follow googles instructions. This caused us wasting time 
+on compiling android source witch was not necessary.
 
 %More - volatility, plugins, building kernel.
 
