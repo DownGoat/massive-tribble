@@ -62,9 +62,8 @@ retrieve. In this experiment we were not able to retrive any data of the message
 data.
 \begin{wrapfigure}{r}{0.5\textwidth}
     \begin{center}
-        \includegraphics[scale=0.48]{textsecure.png}
+        \includegraphics[scale=0.40]{textsecure.png}
     \end{center}
-    \vspace{-50pt}                                                                                                                                                                 
 \end{wrapfigure}
 
 \subsection{Screen lock}
@@ -89,16 +88,20 @@ pincode from the memory dump. By searching for the pincode and passphrase we saw
         
         \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[scale=0.48]{strings_grep_pin.png}
-                \caption{A gull}
+                \caption{Image showing the output of strings piped into grep
+                which is looking for the pin.}
                 \label{fig:gull}
         \end{subfigure}%
         \qquad \qquad \qquad \qquad \qquad %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
           %(or a blank line to force the subfigure onto a new line)
         \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[scale=0.48]{strings_grep_pass.png}
-                \caption{A tiger}
+                \caption{This image shows the same, but searching for a
+                password insted, notic what seems to be half of a hash appended
+            to the password and pin in both images.}
                 \label{fig:tiger}
         \end{subfigure}
+        \vspace{-20pt}
 
 \end{figure}
 
