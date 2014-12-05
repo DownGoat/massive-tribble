@@ -26,4 +26,19 @@ able to find this plugin to test it.\\
 
 Their paper may be the first paper published that presents a method of accurate memory acquisition on
 Android, as they write in their conclusions "To our knowledge, this is the first published work on
-accurate physical memory acquisition and deep memory analysis of the Android kernel's structures".
+accurate physical memory acquisition and deep memory analysis of the Android kernel's structures"\\
+
+In 2012 a paper called Forensic Recovery of Scrambled Telephones (FROST) was 
+released, in this paper where presented a tool for forensic recovery of scrambled 
+android phones. With this tool it made it possible to retrieve disk encryption 
+keys from RAM.\cite{frost_paper}]\\
+
+To perform this kind of attack you must place the phone in a cold place like a 
+freezer, so the phone itself goes below 10 degree C. In their experiment they 
+place a phone in a -15 degree freezer for 60 minutes. They then reset the phone, 
+either with a dedicated reset-button (if the phone has one) or quickly taking 
+the battery out and in to make it reset. These procedures are very time sensitive, 
+so it’s very important that they are performed in a precise and fast. Next step 
+is pressing the volume up, down and power button at the same time to make the 
+phone jump into “fastboot mode”. From there it’s possible to load the FROST 
+recovery image and boot that up.\footnote{http://www1.cs.fau.de/frost/}
